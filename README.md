@@ -30,4 +30,4 @@ names(wacolors)
 
 ## The Palettes
 
-<img src="man/figures/README-palettes-1.png" height="72" /><img src="man/figures/README-palettes-2.png" height="72" /><img src="man/figures/README-palettes-3.png" height="72" /><img src="man/figures/README-palettes-4.png" height="72" />
+![](man/figures/README-palettes-1.png)<!-- -->![](man/figures/README-palettes-2.png)<!-- -->![](man/figures/README-palettes-3.png)<!-- -->![](man/figures/README-palettes-4.png)<!-- -->

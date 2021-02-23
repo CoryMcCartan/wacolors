@@ -40,7 +40,7 @@ names(wacolors)
 
 ## The Palettes
 
-```{r palettes, echo=F, fig.height=1, out.height="72", out.width=NULL}
+```{r palettes, echo=F, fig.height=1, out.width=NULL}
 library(wacolors)
 
 for (pal in names(wacolors)) {
