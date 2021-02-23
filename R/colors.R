@@ -16,19 +16,19 @@
 #' @export
 wacolors = list(
     rainier = c(ground="#6D9537", lake="#364B6F", rock="#A1A2B7", trees="#2A4E45",
-                lodge="#7F4E28", fall_bush="#E59A20", glacier="#DEE5F0"),
+                lodge="#7F4E28", fall_bush="#E59A20", glacier="#D2D8E8"),
     rainier_meadow = c(ground="#6D9337", ragwort="#EECE12", paintbrush="#DE327D",
                        penstemon="#7754ED", western_anemone="#DCD5A8",
                        trees="#2A4B41", bog_orchid="#C1B062"),
     larch = c(larch="#DEA141", shrub="#313D23", rock="#8698A4",
               moss="#7F6A3D", dirt="#C9AB85", forest="#718C7D"),
-    forest = c(shadows="#183314", trees="#719133", stream="#0D2633", dirt="#553727"),
+    forest = c(shadows="#183314", trees="#719133", stream="#0D2633", dirt="#5a3f2f"),
     understory = c(shadows="#183314", trees="#425426",
                         moss="#60652B", tips="#719133"),
     seattle_night = c(columbia="#1A243C", dock_lights="#CA893D", ferry="#7393C1",
                       seafirst="#0B0912", pike_clock="#F1383C", sky="#0C3E84",
                       smith="#C3B497", puddle="#372937"),
-    seattle_fall = c("#756211", "#C7AA1F", "#C0664A", "#69798B", "#709FC3"),
+    seattle_fall = c("#5C5F0A", "#C7AA1F", "#C0664A", "#69798B", "#709FC3"),
     pike_place = c(neon="#F85051", lemons="#F3B866",
                    broccoli="#698423", seafood_sign="#2480F0", floor="#725334"),
     fort_worden = c(sea="#617493", shrub="#313E18", lighthouse="#A7B5C9",
@@ -65,17 +65,21 @@ wacolors = list(
                red="#800000", medblue="#014098")
 )
 
+cont_pal = c("sound_sunset", "understory", "winter_mountain",
+             "ferries", "volcano", "locks", "plane_view")
+
 #' Washington State Color Palette Generator
 #'
 #' Generate `palette` objects from the `wacolors` list
 #'
-#' @param name The name of the palette (partial matching supported), or an
+#' @param palette The name of the palette (partial matching supported), or an
 #'   actual palette from `[wacolors]`.
+#' @param which if not `NULL`, the indices or names of a subset of colors to use.
 #' @param n The number of colors in the palette. If this exceeds the actual
 #'   number and `type` is not provided, it will be set to `continuous`.
 #' @param type Either `continuous` or `discrete`. Use `continuous` if you want
 #'   to automatically interpolate between colors.
-#' @param rev `TRUE` if palette should be reversed.
+#' @param reverse `TRUE` if palette should be reversed.
 #'
 #' @return A vector of colors of type `palette`
 #'
@@ -85,11 +89,14 @@ wacolors = list(
 #' wa_pal("sound_sunset", 20, "continuous")
 #' wa_pal("washington_pass", reverse=TRUE)
 #'
+#' @importFrom grDevices colorRampPalette
 #' @export
-wa_pal = function(name, n, type=c("discrete", "continuous"), rev=FALSE) {
-    obj = match_pal(name)
+wa_pal = function(palette, n, which=NULL,
+                  type=c("discrete", "continuous"), reverse=FALSE) {
+    obj = match_pal(palette)
     pal = obj$pal
     name = obj$name
+    if (!is.null(which)) pal = pal[which]
 
     if (is.null(pal))
         stop("Palette `", name, "` not found.")
@@ -97,16 +104,16 @@ wa_pal = function(name, n, type=c("discrete", "continuous"), rev=FALSE) {
     if (missing(n))
         n = length(pal)
 
-    if (n > length(pal) && missing(type))
+    if (n > length(pal))
         type="continuous"
     type = match.arg(type)
 
     if (type == "discrete")
         out = pal[1:n]
     else
-        out = grDevices::colorRampPalette(pal)(n)
+        out = colorRampPalette(pal)(n)
 
-    if (rev) out = base::rev(out)
+    if (reverse) out = rev(out)
 
     structure(out, class="palette", name=name)
 }

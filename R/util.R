@@ -73,6 +73,14 @@ pth = function(x) {
     rgb = as.list(as.integer(strsplit(x, "\\s")[[1]]) / 256)
     col = do.call(colorspace::sRGB, rgb)
     str = paste0('"', colorspace::hex(col), '"')
-    rstudioapi::insertText(rstudioapi::getActiveDocumentContext()$selection[[1]]$range, str)
-    rstudioapi::sendToConsole(str, execute=F)
+    code_output(str)
+}
+
+# Helper for interactive code output
+code_output = function(x) {
+    if (interactive() && require("rstudioapi", quietly=TRUE)) {
+        rstudioapi::sendToConsole(x, execute=F)
+    } else {
+        cat(x, "\n")
+    }
 }

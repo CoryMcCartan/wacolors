@@ -10,7 +10,7 @@ test_that("Printing works OK", {
         '</div><div style="flex-grow: 1; background: black;"></div></div></div>'
         )
 
-    expect_output(print.palette(x), exp_out, fixed=TRUE)
+    expect_output(palette_html(x), exp_out, fixed=TRUE)
 })
 
 
@@ -19,4 +19,10 @@ test_that("Plotting works OK", {
     attr(x, "name") = "pal"
 
     expect_invisible(plot.palette(x))
+})
+
+test_that("Code generation works OK", {
+    exp_out = 'PAL_RAINIER = c("#6D9537", "#364B6F", "#A1A2B7", "#2A4E45")'
+    expect_output(pal_vector("rainier", 4), exp_out, fixed=TRUE)
+
 })

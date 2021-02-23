@@ -22,9 +22,10 @@ knitr::opts_chunk$set(
 
 The `wacolor` package contains `r length(wacolors::wacolors)` color palettes
 taken from the landscapes and cities of Washington state. Each color was
-extracted from a photograph, with minor alterations made to improve balance.
-The palettes were evaluated by the color-blind author to ensure colors are
-distinguishable, but some palettes risk more confusion than others.
+extracted from a photograph, with minor alterations made to improve balance 
+and desaturability. The palettes were evaluated by the color-blind author to
+ensure colors are distinguishable, but some palettes risk more confusion than
+others.
 
 ## Installation
 <!-- You can install the released version of wacolors from [CRAN](https://CRAN.R-project.org) with: -->
@@ -35,9 +36,11 @@ devtools::install_github("CoryMcCartan/wacolors")
 ```
 
 ## Usage
-
+It's easy to select a palette. Access palettes through `wacolors$...` for
+autocompletion suggestions.
 ```{r}
 library(wacolors)
+library(ggplot2)
 
 # See all palettes
 names(wacolors)
@@ -46,6 +49,36 @@ names(wacolors)
 wacolors$rainier
 ```
 
+The package comes with `ggplot2`-compatible scales which are easy to use.
+```{r ggplot}
+# access by name
+ggplot(mtcars, aes(mpg, wt)) +
+    geom_point(aes(color = factor(cyl), size=hp)) +
+    scale_color_wa_d("seattle_night")
+
+# or access using `wacolors$...`
+ggplot(diamonds) +
+    geom_bar(aes(x = cut, fill = clarity)) +
+    scale_fill_wa_d(wacolors$sound_sunset, reverse=TRUE)
+```
+
+You can use the `wa_pal` function to directly construct a discretized/binned
+color scale.
+```{r heatmap}
+image(volcano, col=wa_pal("ferries", 12))
+image(volcano, col=wa_pal("volcano", 80, reverse=TRUE))
+```
+
+### Code Generation
+In case you do not wish to have `wacolors` as a dependency, you may use the 
+`pal_vector()` and `pal_functions()` functions, which generate self-contained
+code for using the palettes.  When using RStudio, this code will be loaded,
+ready to copy, at the console prompt.
+```{r}
+pal_vector("sound_sunset", 15)
+
+pal_functions("locks")
+```
 
 ## The Palettes
 
@@ -53,6 +86,7 @@ wacolors$rainier
 ```{r cont-palettes, echo=F, fig.height=1, out.width=NULL}
 cont_pal = c("sound_sunset", "understory", "winter_mountain", 
              "ferries", "volcano", "locks", "plane_view")
+
 for (pal in cont_pal) {
     plot(wa_pal(pal))
 }

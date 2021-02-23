@@ -11,6 +11,10 @@ Description:  Color palettes taken from the landscapes and cities of Washington
     confusion than others.
 Depends:
     R (>= 3.0)
+Imports:
+    graphics,
+    grDevices,
+    ggplot2
 Suggests: 
     knitr,
     rmarkdown,
