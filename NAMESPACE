@@ -3,7 +3,7 @@
 S3method(plot,palette)
 S3method(print,palette)
 export(palette_html)
-export(wa_palette)
+export(wa_pal)
 export(wacolors)
 importFrom(graphics,image)
 importFrom(graphics,par)

@@ -1,3 +1,19 @@
+match_pal = function(name) {
+    found_name = pmatch(name, names(wacolors))
+    if (!any(is.na(found_name))) {
+        pal = wacolors[[found_name]]
+    } else if (all(is.na(found_name)) && all(startsWith(name, "#"))) {
+        pal = name
+        try_match = vapply(wacolors, FUN=function(x) isTRUE(all.equal(x, pal)),
+                           FUN.VALUE=logical(1))
+        name = names(wacolors)[try_match]
+    } else {
+        stop("Palette `", name, "` not found.")
+    }
+
+    list(pal=pal, name=name)
+}
+
 #' @export
 palette_html = function(x, maxwidth="30em", height="1em", ...) {
     n <- length(x)

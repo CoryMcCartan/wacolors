@@ -44,6 +44,6 @@ names(wacolors)
 library(wacolors)
 
 for (pal in names(wacolors)) {
-    plot(wa_palette(pal))
+    plot(wa_pal(pal))
 }
 ```
