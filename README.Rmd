@@ -30,11 +30,10 @@ devtools::install_github("CoryMcCartan/github")
 
 ## The Palettes
 
-```{r echo=F, results="asis"}
+```{r palettes, echo=F, fig.height=1}
 library(wacolors)
 
 for (pal in names(wacolors)) {
-    cat(palette_html(wa_palette(pal)))
-    cat("<br />\n")
+    plot(wa_palette(pal))
 }
 ```

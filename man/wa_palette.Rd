@@ -7,8 +7,7 @@
 wa_palette(name, n, type = c("discrete", "continuous"))
 }
 \arguments{
-\item{name}{The name of the palette. Quasiquoted and partial matching
-supported.}
+\item{name}{The name of the palette. Partial matching supported.}
 
 \item{n}{The number of colors in the palette. If this exceeds the actual
 number and \code{type} is not provided, it will be set to \code{continuous}.}
