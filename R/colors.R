@@ -9,9 +9,11 @@
 #' @export
 wacolors = list(
     flag = c(green="#007D50", yellow="#F7DB03", blue="#5EBFDE", tan="#FBDBC9"),
-    UW = c(purple="#4B2E83", suzallo="#C3A46D", cherry="#E9C2C6",
+    UW = c(purple="#4B2E83", suzallo="#C3A46D", cherry="#E1B2B8",
            brick="#664333", suzallo_light="#D6B844", stone="#92847A"),
-    airplane = c("#161F47", "#134575", "#4A72B8", "#99C6F7", "#DCE8F8")
+    airplane = c("#161F47", "#134575", "#4A72B8", "#99C6F7", "#DCE8F8"),
+    tartan = c(green="#004500", gold="#B2B202", darkblue="#191959",
+               red="#800000", medblue="#014098")
 )
 
 #' Washington State Color Palette Generator

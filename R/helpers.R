@@ -29,7 +29,7 @@ print.palette = function(x, ...) {
     rect(0, 0.9, n + 1, 1.1, col=grDevices::rgb(1, 1, 1, 0.8), border=NA)
     text((n + 1) / 2, 1, labels=attr(x, "name"), col="black", cex=1, font=2)
 
-    print(unclass(wa_palette(flag)))
+    print(unclass(x))
     invisible(x)
 }
 

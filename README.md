@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Colorblind-friendly Colors from Washington State
+# Colorblind-friendly Palettes from Washington State
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -18,6 +18,16 @@ You can install `wacolors` from GitHub with:
 devtools::install_github("CoryMcCartan/github")
 ```
 
+## Usage
+
+``` r
+library(wacolors)
+
+# See all palettes
+names(wacolors)
+#> [1] "flag"     "UW"       "airplane" "tartan"
+```
+
 ## The Palettes
 
-<img src="man/figures/README-palettes-1.png" width="100%" /><img src="man/figures/README-palettes-2.png" width="100%" /><img src="man/figures/README-palettes-3.png" width="100%" />
+<img src="man/figures/README-palettes-1.png" height="72" /><img src="man/figures/README-palettes-2.png" height="72" /><img src="man/figures/README-palettes-3.png" height="72" /><img src="man/figures/README-palettes-4.png" height="72" />

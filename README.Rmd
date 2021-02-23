@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Colorblind-friendly Colors from Washington State
+# Colorblind-friendly Palettes from Washington State
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -28,9 +28,19 @@ You can install `wacolors` from GitHub with:
 devtools::install_github("CoryMcCartan/github")
 ```
 
+## Usage
+
+```{r}
+library(wacolors)
+
+# See all palettes
+names(wacolors)
+```
+
+
 ## The Palettes
 
-```{r palettes, echo=F, fig.height=1}
+```{r palettes, echo=F, fig.height=1, out.height="72", out.width=NULL}
 library(wacolors)
 
 for (pal in names(wacolors)) {

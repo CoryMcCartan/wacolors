@@ -1,5 +1,5 @@
 Package: wacolors
-Title: Colorblind-friendly Colors from Washington State
+Title: Colorblind-friendly Palettes from Washington State
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Cory",
