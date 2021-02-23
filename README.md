@@ -24,7 +24,7 @@ than others.
 You can install `wacolors` from GitHub with:
 
 ``` r
-devtools::install_github("CoryMcCartan/wacolors")
+devtools::install_github("CoryMcCartan/wacolors@release")
 ```
 
 ## Usage
