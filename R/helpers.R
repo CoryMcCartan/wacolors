@@ -1,0 +1,44 @@
+#' @export
+palette_html = function(x, maxwidth="30em", height="1em", ...) {
+    n <- length(x)
+
+    cat('<div class="color-palette">',
+        '<span style="text-weight: bold">', attr(x, "name"), '</span>',
+        '<div style="display: flex; flex-direction: row; width: 100%; ',
+            'height: ', height, '; max-width: ', maxwidth, ';">',
+            paste0('<div style="flex-grow: 1; background: ', x,
+                   ';"></div>', collapse=""),
+        '</div>',
+        '</div>', sep="")
+
+    invisible(x)
+}
+
+
+# `plot.palette` modified from that in `wesanderson` (c) 2016 Karthik Ram
+#' @export
+#' @importFrom graphics rect par image text
+print.palette = function(x, ...) {
+    n <- length(x)
+    old <- par(mar=c(0.5, 0.5, 0.5, 0.5))
+    on.exit(par(old))
+
+    image(1:n, 1, as.matrix(1:n), col=x,
+          ylab="", xaxt="n", yaxt="n", bty="n")
+
+    rect(0, 0.9, n + 1, 1.1, col=grDevices::rgb(1, 1, 1, 0.8), border=NA)
+    text((n + 1) / 2, 1, labels=attr(x, "name"), col="black", cex=1, font=2)
+
+    print(unclass(wa_palette(flag)))
+    invisible(x)
+}
+
+#' Paste-to-hex
+#' @keywords internal
+pth = function(x) {
+    rgb = as.list(as.integer(strsplit(x, "\\s")[[1]]) / 256)
+    col = do.call(colorspace::sRGB, rgb)
+    str = paste0('"', colorspace::hex(col), '"')
+    rstudioapi::insertText(rstudioapi::getActiveDocumentContext()$selection[[1]]$range, str)
+    rstudioapi::sendToConsole(str, execute=F)
+}

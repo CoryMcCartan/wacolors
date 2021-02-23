@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Colorblind-friendly Colors from Washington State
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+About the package...
+
+## Installation
+<!-- You can install the released version of wacolors from [CRAN](https://CRAN.R-project.org) with: -->
+You can install `wacolors` from GitHub with:
+
+``` r
+devtools::install_github("CoryMcCartan/github")
+```
+
+## The Palettes
+
+```{r echo=F, results="asis"}
+library(wacolors)
+
+for (pal in names(wacolors)) {
+    cat(palette_html(wa_palette(pal)))
+    cat("<br />\n")
+}
+```
