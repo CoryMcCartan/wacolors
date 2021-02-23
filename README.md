@@ -10,12 +10,12 @@
 
 ![Mt. Rainier](cover.jpg)
 
-The `wacolor` package contains 29 color palettes taken from the
+The `wacolor` package contains 30 color palettes taken from the
 landscapes and cities of Washington state. Each color was extracted from
 a photograph, with minor alterations made to improve balance and
 desaturability. The palettes were evaluated by the color-blind author to
 ensure colors are distinguishable, but some palettes risk more confusion
-than others.
+than others, especially at small scales.
 
 ## Installation
 
@@ -41,16 +41,16 @@ names(wacolors)
 #>  [1] "rainier"         "rainier_meadow"  "larch"           "forest"         
 #>  [5] "understory"      "seattle_night"   "seattle_fall"    "pike_place"     
 #>  [9] "fort_worden"     "chambers_bay"    "stuart"          "sound_sunset"   
-#> [13] "washington_pass" "winthrop"        "ross_lake"       "winter_mountain"
-#> [17] "library"         "ferries"         "volcano"         "locks"          
-#> [21] "deception_pass"  "scrubland"       "palouse"         "grand_coulee"   
-#> [25] "chihuly"         "plane_view"      "UW"              "flag"           
-#> [29] "tartan"
+#> [13] "washington_pass" "winthrop"        "forest_fire"     "ross_lake"      
+#> [17] "winter_mountain" "library"         "ferries"         "volcano"        
+#> [21] "locks"           "deception_pass"  "scrubland"       "palouse"        
+#> [25] "grand_coulee"    "chihuly"         "plane_view"      "UW"             
+#> [29] "flag"            "tartan"
 
 # See one palette
 wacolors$rainier
 #>    ground      lake      rock     trees     lodge fall_bush   glacier 
-#> "#6D9537" "#364B6F" "#A1A2B7" "#2A4E45" "#7F4E28" "#E59A20" "#D2D8E8"
+#> "#6D9537" "#364B6F" "#9C9DB0" "#2A4E45" "#7F4E28" "#E59A20" "#D4D8E2"
 ```
 
 The package comes with `ggplot2`-compatible scales which are easy to
@@ -100,7 +100,7 @@ code will be loaded, ready to copy, at the console prompt.
 pal_vector("sound_sunset", 15)
 #> PAL_SOUND_SUNSET = c("#41527A", "#4C5F84", "#586D8F", "#627898", "#6C82A0",
 #>                      "#778AA4", "#838EA0", "#90929C", "#9D9490", "#AB9885",
-#>                      "#BC9E7F", "#D0A77C", "#E0B57F", "#E9CE8F", "#F3E8A0")
+#>                      "#BC9E7F", "#D0A77C", "#E0B47E", "#EBCB8A", "#F6E297")
 
 pal_functions("locks")
 #> scale_color_locks_d = function(...) {
@@ -136,4 +136,4 @@ pal_functions("locks")
 
 ### All Palettes
 
-![](man/figures/README-disc-palettes-1.png)<!-- -->![](man/figures/README-disc-palettes-2.png)<!-- -->![](man/figures/README-disc-palettes-3.png)<!-- -->![](man/figures/README-disc-palettes-4.png)<!-- -->![](man/figures/README-disc-palettes-5.png)<!-- -->![](man/figures/README-disc-palettes-6.png)<!-- -->![](man/figures/README-disc-palettes-7.png)<!-- -->![](man/figures/README-disc-palettes-8.png)<!-- -->![](man/figures/README-disc-palettes-9.png)<!-- -->![](man/figures/README-disc-palettes-10.png)<!-- -->![](man/figures/README-disc-palettes-11.png)<!-- -->![](man/figures/README-disc-palettes-12.png)<!-- -->![](man/figures/README-disc-palettes-13.png)<!-- -->![](man/figures/README-disc-palettes-14.png)<!-- -->![](man/figures/README-disc-palettes-15.png)<!-- -->![](man/figures/README-disc-palettes-16.png)<!-- -->![](man/figures/README-disc-palettes-17.png)<!-- -->![](man/figures/README-disc-palettes-18.png)<!-- -->![](man/figures/README-disc-palettes-19.png)<!-- -->![](man/figures/README-disc-palettes-20.png)<!-- -->![](man/figures/README-disc-palettes-21.png)<!-- -->![](man/figures/README-disc-palettes-22.png)<!-- -->![](man/figures/README-disc-palettes-23.png)<!-- -->![](man/figures/README-disc-palettes-24.png)<!-- -->![](man/figures/README-disc-palettes-25.png)<!-- -->![](man/figures/README-disc-palettes-26.png)<!-- -->![](man/figures/README-disc-palettes-27.png)<!-- -->![](man/figures/README-disc-palettes-28.png)<!-- -->![](man/figures/README-disc-palettes-29.png)<!-- -->
+![](man/figures/README-disc-palettes-1.png)<!-- -->![](man/figures/README-disc-palettes-2.png)<!-- -->![](man/figures/README-disc-palettes-3.png)<!-- -->![](man/figures/README-disc-palettes-4.png)<!-- -->![](man/figures/README-disc-palettes-5.png)<!-- -->![](man/figures/README-disc-palettes-6.png)<!-- -->![](man/figures/README-disc-palettes-7.png)<!-- -->![](man/figures/README-disc-palettes-8.png)<!-- -->![](man/figures/README-disc-palettes-9.png)<!-- -->![](man/figures/README-disc-palettes-10.png)<!-- -->![](man/figures/README-disc-palettes-11.png)<!-- -->![](man/figures/README-disc-palettes-12.png)<!-- -->![](man/figures/README-disc-palettes-13.png)<!-- -->![](man/figures/README-disc-palettes-14.png)<!-- -->![](man/figures/README-disc-palettes-15.png)<!-- -->![](man/figures/README-disc-palettes-16.png)<!-- -->![](man/figures/README-disc-palettes-17.png)<!-- -->![](man/figures/README-disc-palettes-18.png)<!-- -->![](man/figures/README-disc-palettes-19.png)<!-- -->![](man/figures/README-disc-palettes-20.png)<!-- -->![](man/figures/README-disc-palettes-21.png)<!-- -->![](man/figures/README-disc-palettes-22.png)<!-- -->![](man/figures/README-disc-palettes-23.png)<!-- -->![](man/figures/README-disc-palettes-24.png)<!-- -->![](man/figures/README-disc-palettes-25.png)<!-- -->![](man/figures/README-disc-palettes-26.png)<!-- -->![](man/figures/README-disc-palettes-27.png)<!-- -->![](man/figures/README-disc-palettes-28.png)<!-- -->![](man/figures/README-disc-palettes-29.png)<!-- -->![](man/figures/README-disc-palettes-30.png)<!-- -->

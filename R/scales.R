@@ -107,17 +107,3 @@ scale_colour_wa_b = scale_color_wa_d
 #' @rdname scale_wa
 #' @export
 scale_fill_wa_b = scale_fill_wa_d
-
-if (F) {
-ggplot(mtcars, aes(mpg, wt)) +
-    geom_point(aes(color = factor(cyl), size=hp)) +
-    scale_color_wa_d()
-
-ggplot(mtcars, aes(mpg, wt)) +
-    geom_point(aes(colour = hp)) +
-    scale_color_wa_c("seattle_night",  which=c("seafirst", "pike_clock"))
-
-ggplot(diamonds) +
-    geom_bar(aes(x = cut, fill = clarity)) +
-    scale_fill_wa_d(wacolors$sound_sunset, reverse=TRUE)
-}
