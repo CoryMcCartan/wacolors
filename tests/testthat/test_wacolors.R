@@ -22,7 +22,7 @@ test_that("Plotting works OK", {
 })
 
 test_that("Code generation works OK", {
-    exp_out = 'PAL_RAINIER = c("#6D9537", "#364B6F", "#A1A2B7", "#2A4E45")'
+    exp_out = 'PAL_RAINIER = c('
     expect_output(pal_vector("rainier", 4), exp_out, fixed=TRUE)
 
 })
