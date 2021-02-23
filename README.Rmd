@@ -85,8 +85,8 @@ pal_functions("locks")
 
 ### Continuous Palettes
 ```{r cont-palettes, echo=F, fig.height=1, out.width=NULL}
-cont_pal = c("sound_sunset", "understory", "winter_mountain", 
-             "ferries", "volcano", "locks", "plane_view")
+cont_pal = c("sound_sunset", "understory", "winter_mountain", "ferries", 
+             "forest_fire", "volcano", "locks", "plane_view")
 
 for (pal in cont_pal) {
     plot(wa_pal(pal))
