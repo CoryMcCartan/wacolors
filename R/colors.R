@@ -23,6 +23,8 @@ wacolors = list(
               moss="#7F6A3D", dirt="#C9AB85", forest="#718C7D"),
     understory = c(shadows="#183314", trees="#425426", moss="#60652B",
                    tips="#719133", stream="#0D2633", dirt="#553727"),
+    understory_cont = c(shadows="#183314", trees="#425426",
+                        moss="#60652B", tips="#719133"),
     seattle_night = c(columbia="#1A243C", dock_lights="#CA893D", ferry="#7393C1",
                       seafirst="#0B0912", pike_clock="#F1383C", sky="#0C3E84",
                       smith="#C3B497", puddle="#372937"),
