@@ -4,7 +4,14 @@
 \alias{palette_html}
 \title{Create HTML code to view palette}
 \usage{
-palette_html(x, maxwidth = "30em", height = "1em", ...)
+palette_html(x, maxwidth = "30em", height = "1em")
+}
+\arguments{
+\item{x}{the \code{palette} object}
+
+\item{maxwidth}{the maximum width of the output, in CSS units}
+
+\item{height}{the height width of the output, in CSS units}
 }
 \description{
 Create HTML code to view palette

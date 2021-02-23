@@ -45,6 +45,8 @@ name, limits, breaks, labels and so forth.}
 Color palettes for \code{ggplot2}
 }
 \examples{
+library(ggplot2)
+
 ggplot(mtcars, aes(mpg, wt)) +
     geom_point(aes(color = factor(cyl), size=hp)) +
     scale_color_wa_d()

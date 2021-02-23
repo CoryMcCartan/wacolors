@@ -6,6 +6,9 @@
 \usage{
 match_pal(name)
 }
+\arguments{
+\item{name}{the name of the palette or the palette itself}
+}
 \description{
 Takes name of palette or palette itself and returns palette + name
 }

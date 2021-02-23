@@ -1,4 +1,5 @@
 #' Takes name of palette or palette itself and returns palette + name
+#' @param name the name of the palette or the palette itself
 match_pal = function(name) {
     found_name = pmatch(name, names(wacolors))
     if (!any(is.na(found_name))) {
@@ -17,8 +18,12 @@ match_pal = function(name) {
 
 #' Create HTML code to view palette
 #'
+#' @param x the `palette` object
+#' @param maxwidth the maximum width of the output, in CSS units
+#' @param height the height width of the output, in CSS units
+#'
 #' @export
-palette_html = function(x, maxwidth="30em", height="1em", ...) {
+palette_html = function(x, maxwidth="30em", height="1em") {
     n <- length(x)
 
     cat('<div class="color-palette">',
@@ -84,7 +89,7 @@ pth = function(x) {
 
 # Helper for interactive code output
 code_output = function(x) {
-    if (interactive() && require("rstudioapi", quietly=TRUE)) {
+    if (interactive() && requireNamespace("rstudioapi", quietly=TRUE)) {
         rstudioapi::sendToConsole(x, execute=F)
     } else {
         cat(x, "\n")

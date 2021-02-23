@@ -30,9 +30,8 @@ pal_vector = function(palette, n, which=NULL,
 #'
 #' @param palette a `[wacolors]` palette or palette name.
 #' @param which if not `NULL`, the indices or names of a subset of colors to use.
-#' @param ... Other arguments passed on to [ggplot2::discrete_scale()],
-#'   [ggplot2::continuous_scale()], or [ggplot2::binned_scale()] to control
-#'   name, limits, breaks, labels and so forth.
+#' @param type Either `continuous` or `discrete`. Use `continuous` if you want
+#'   to automatically interpolate between colors.
 #' @param reverse `TRUE` if the colors should be reversed.
 #'
 #' @examples

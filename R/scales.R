@@ -1,4 +1,8 @@
 #' Helper function-palette for discrete scales
+#'
+#' @param pal the palette colors
+#' @param reverse whether to reverse
+#'
 #' @importFrom grDevices colorRampPalette rgb
 discr_pal = function(pal, reverse=FALSE) {
     n_col = length(pal)
@@ -24,6 +28,8 @@ discr_pal = function(pal, reverse=FALSE) {
 #' @param reverse `TRUE` if the colors should be reversed.
 #'
 #' @examples
+#' library(ggplot2)
+#'
 #' ggplot(mtcars, aes(mpg, wt)) +
 #'     geom_point(aes(color = factor(cyl), size=hp)) +
 #'     scale_color_wa_d()
@@ -36,7 +42,7 @@ discr_pal = function(pal, reverse=FALSE) {
 #'     geom_bar(aes(x = cut, fill = clarity)) +
 #'     scale_fill_wa_d(wacolors$sound_sunset, reverse=TRUE)
 #'
-#' @importFrom ggplot2 discrete_scale scale_color_gradientn
+#' @importFrom ggplot2 discrete_scale scale_color_gradientn scale_fill_gradientn
 #' @export
 scale_color_wa_d = function(palette="rainier", which=NULL, ..., reverse=FALSE) {
     pal = match_pal(palette)

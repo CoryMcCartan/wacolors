@@ -16,11 +16,10 @@ pal_functions(
 
 \item{which}{if not \code{NULL}, the indices or names of a subset of colors to use.}
 
-\item{reverse}{\code{TRUE} if the colors should be reversed.}
+\item{type}{Either \code{continuous} or \code{discrete}. Use \code{continuous} if you want
+to automatically interpolate between colors.}
 
-\item{...}{Other arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}},
-\code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}}, or \code{\link[ggplot2:binned_scale]{ggplot2::binned_scale()}} to control
-name, limits, breaks, labels and so forth.}
+\item{reverse}{\code{TRUE} if the colors should be reversed.}
 }
 \description{
 Call this function to get the code for the \verb{scale_*} functions for a palette.

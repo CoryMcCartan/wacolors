@@ -6,6 +6,11 @@
 \usage{
 discr_pal(pal, reverse = FALSE)
 }
+\arguments{
+\item{pal}{the palette colors}
+
+\item{reverse}{whether to reverse}
+}
 \description{
 Helper function-palette for discrete scales
 }
