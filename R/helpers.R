@@ -1,3 +1,4 @@
+#' Takes name of palette or palette itself and returns palette + name
 match_pal = function(name) {
     found_name = pmatch(name, names(wacolors))
     if (!any(is.na(found_name))) {
@@ -14,6 +15,8 @@ match_pal = function(name) {
     list(pal=pal, name=name)
 }
 
+#' Create HTML code to view palette
+#'
 #' @export
 palette_html = function(x, maxwidth="30em", height="1em", ...) {
     n <- length(x)

@@ -21,8 +21,8 @@ Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
 \item \code{rainier}
 \item \code{rainier_meadow}
 \item \code{larch}
+\item \code{forest}
 \item \code{understory}
-\item \code{understory_cont}
 \item \code{seattle_night}
 \item \code{seattle_fall}
 \item \code{pike_place}

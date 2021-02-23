@@ -20,11 +20,11 @@ knitr::opts_chunk$set(
 
 ![Mt. Rainier](cover.jpg)
 
-The `wacolor` package contains color palettes taken from the landscapes and
-cities of Washington state. Each color was extracted from a photograph, with
-minor alterations made to improve balance.  The palettes were evaluated by the
-color-blind author to ensure colors are distinguishable, but some palettes risk
-more confusion than others.
+The `wacolor` package contains `r length(wacolors::wacolors)` color palettes
+taken from the landscapes and cities of Washington state. Each color was
+extracted from a photograph, with minor alterations made to improve balance.
+The palettes were evaluated by the color-blind author to ensure colors are
+distinguishable, but some palettes risk more confusion than others.
 
 ## Installation
 <!-- You can install the released version of wacolors from [CRAN](https://CRAN.R-project.org) with: -->
@@ -41,6 +41,9 @@ library(wacolors)
 
 # See all palettes
 names(wacolors)
+
+# See one palette
+wacolors$rainier
 ```
 
 
@@ -48,7 +51,7 @@ names(wacolors)
 
 ### Continuous Palettes
 ```{r cont-palettes, echo=F, fig.height=1, out.width=NULL}
-cont_pal = c("sound_sunset", "understory_cont", "winter_mountain", 
+cont_pal = c("sound_sunset", "understory", "winter_mountain", 
              "ferries", "volcano", "locks", "plane_view")
 for (pal in cont_pal) {
     plot(wa_pal(pal))
