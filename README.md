@@ -4,6 +4,8 @@
 # Colorblind-friendly Palettes from Washington State
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/CoryMcCartan/wacolors/workflows/R-CMD-check/badge.svg)](https://github.com/CoryMcCartan/wacolors/actions)
 <!-- badges: end -->
 
 ![Mt. Rainier](cover.jpg)
