@@ -22,6 +22,7 @@ Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
 \item \code{rainier_meadow}
 \item \code{larch}
 \item \code{understory}
+\item \code{understory_cont}
 \item \code{seattle_night}
 \item \code{seattle_fall}
 \item \code{pike_place}
@@ -50,6 +51,7 @@ Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
 }
 \examples{
 wacolors$rainier
+wacolors$seattle_night[1:2]
 
 }
 \keyword{datasets}

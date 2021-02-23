@@ -27,5 +27,7 @@ Generate \code{palette} objects from the \code{wacolors} list
 \examples{
 wa_pal("rainier")
 wa_pal(wacolors$rainier)
+wa_pal("sound_sunset", 20, "continuous")
+wa_pal("washington_pass", reverse=TRUE)
 
 }

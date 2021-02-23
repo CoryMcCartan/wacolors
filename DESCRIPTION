@@ -2,12 +2,13 @@ Package: wacolors
 Title: Colorblind-friendly Palettes from Washington State
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Cory",
-           family = "McCartan",
-           role = c("aut", "cre"),
-           email = "cmccartan@g.harvard.edu",
-           comment = c(ORCID = "https://orcid.org/0000-0002-6251-669X"))
-Description: What the package does (one paragraph).
+    person("Cory", "McCartan", role = c("aut", "cre"),
+           email = "cmccartan@g.harvard.edu")
+Description:  Color palettes taken from the landscapes and cities of Washington 
+    state. Each color was extracted from a photograph, with minor alterations 
+    made to improve balance.  The palettes were evaluated by the color-blind 
+    author to ensure colors are distinguishable, but some palettes risk more 
+    confusion than others.
 Depends:
     R (>= 3.0)
 Suggests: 

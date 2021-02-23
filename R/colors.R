@@ -11,6 +11,7 @@
 #'
 #' @examples
 #' wacolors$rainier
+#' wacolors$seattle_night[1:2]
 #'
 #' @export
 wacolors = list(
@@ -21,8 +22,7 @@ wacolors = list(
                        trees="#2A4B41", bog_orchid="#C1B062"),
     larch = c(larch="#DEA141", shrub="#313D23", rock="#8698A4",
               moss="#7F6A3D", dirt="#C9AB85", forest="#718C7D"),
-    understory = c(shadows="#183314", trees="#425426", moss="#60652B",
-                   tips="#719133", stream="#0D2633", dirt="#553727"),
+    understory = c(shadows="#183314", trees="#719133", stream="#0D2633", dirt="#553727"),
     understory_cont = c(shadows="#183314", trees="#425426",
                         moss="#60652B", tips="#719133"),
     seattle_night = c(columbia="#1A243C", dock_lights="#CA893D", ferry="#7393C1",
@@ -82,6 +82,8 @@ wacolors = list(
 #' @examples
 #' wa_pal("rainier")
 #' wa_pal(wacolors$rainier)
+#' wa_pal("sound_sunset", 20, "continuous")
+#' wa_pal("washington_pass", reverse=TRUE)
 #'
 #' @export
 wa_pal = function(name, n, type=c("discrete", "continuous"), rev=FALSE) {

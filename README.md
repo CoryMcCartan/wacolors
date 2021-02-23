@@ -8,7 +8,11 @@
 
 ![Mt. Rainier](cover.jpg)
 
-About the package…
+The `wacolor` package contains color palettes taken from the landscapes
+and cities of Washington state. Each color was extracted from a
+photograph, with minor alterations made to improve balance. The palettes
+were evaluated by the color-blind author to ensure colors are
+distinguishable, but some palettes risk more confusion than others.
 
 ## Installation
 
@@ -17,7 +21,7 @@ About the package…
 You can install `wacolors` from GitHub with:
 
 ``` r
-devtools::install_github("CoryMcCartan/github")
+devtools::install_github("CoryMcCartan/wacolors")
 ```
 
 ## Usage
