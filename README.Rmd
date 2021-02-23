@@ -89,7 +89,7 @@ cont_pal = c("sound_sunset", "understory", "winter_mountain", "ferries",
              "forest_fire", "volcano", "locks", "plane_view")
 
 for (pal in cont_pal) {
-    plot(wa_pal(pal))
+    plot(wa_pal(pal, 256))
 }
 ```
 
