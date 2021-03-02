@@ -74,7 +74,7 @@ scale_fill_wa_d = function(palette="rainier", which=NULL, ..., reverse=FALSE) {
 
 #' @rdname scale_wa
 #' @export
-scale_color_wa_c = function(palette="ferries", which=NULL, ..., reverse=FALSE) {
+scale_color_wa_c = function(palette="sound_sunset", which=NULL, ..., reverse=FALSE) {
     pal = match_pal(palette)
     if (!is.null(which)) pal$pal = pal$pal[which]
     if (reverse) pal$pal = rev(pal$pal)
@@ -84,7 +84,7 @@ scale_color_wa_c = function(palette="ferries", which=NULL, ..., reverse=FALSE) {
 
 #' @rdname scale_wa
 #' @export
-scale_fill_wa_c = function(palette="ferries", which=NULL, ..., reverse=FALSE) {
+scale_fill_wa_c = function(palette="sound_sunset", which=NULL, ..., reverse=FALSE) {
     pal = match_pal(palette)
     if (!is.null(which)) pal$pal = pal$pal[which]
     if (reverse) pal$pal = rev(pal$pal)
