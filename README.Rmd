@@ -24,9 +24,9 @@ knitr::opts_chunk$set(
 The `wacolor` package contains `r length(wacolors::wacolors)` color palettes
 taken from the landscapes and cities of Washington state. Each color was
 extracted from a photograph, with minor alterations made to improve balance 
-and desaturability. The palettes were evaluated by the color-blind author to
-ensure colors are distinguishable, but some palettes risk more confusion than
-others, especially at small scales.
+and desaturability. The palettes were evaluated  to ensure colors are
+distinguishable, but some palettes risk more confusion than others, especially
+at small scales.
 
 ## Installation
 <!-- You can install the released version of wacolors from [CRAN](https://CRAN.R-project.org) with: -->

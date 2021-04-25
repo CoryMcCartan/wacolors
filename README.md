@@ -13,9 +13,9 @@
 The `wacolor` package contains 30 color palettes taken from the
 landscapes and cities of Washington state. Each color was extracted from
 a photograph, with minor alterations made to improve balance and
-desaturability. The palettes were evaluated by the color-blind author to
-ensure colors are distinguishable, but some palettes risk more confusion
-than others, especially at small scales.
+desaturability. The palettes were evaluated to ensure colors are
+distinguishable, but some palettes risk more confusion than others,
+especially at small scales.
 
 ## Installation
 
