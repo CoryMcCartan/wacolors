@@ -94,16 +94,32 @@ scale_fill_wa_c = function(palette="sound_sunset", which=NULL, ..., reverse=FALS
 
 #' @rdname scale_wa
 #' @export
+scale_color_wa_b = function(palette="sound_sunset", which=NULL, ..., reverse=FALSE) {
+    pal = match_pal(palette)
+    if (!is.null(which)) pal$pal = pal$pal[which]
+    if (reverse) pal$pal = rev(pal$pal)
+    pal_fun = colorRampPalette(pal$pal)
+
+    binned_scale("color", pal$name, palette=pal_fun, ...)
+}
+
+#' @rdname scale_wa
+#' @export
+scale_fill_wa_b = function(palette="sound_sunset", which=NULL, ..., reverse=FALSE) {
+    pal = match_pal(palette)
+    if (!is.null(which)) pal$pal = pal$pal[which]
+    if (reverse) pal$pal = rev(pal$pal)
+    pal_fun = colorRampPalette(pal$pal)
+
+    binned_scale("fill", pal$name, palette=pal_fun, ...)
+}
+
+#' @rdname scale_wa
+#' @export
 scale_colour_wa_d = scale_color_wa_d
 #' @rdname scale_wa
 #' @export
 scale_colour_wa_c = scale_color_wa_c
 #' @rdname scale_wa
 #' @export
-scale_color_wa_b = scale_color_wa_d
-#' @rdname scale_wa
-#' @export
-scale_colour_wa_b = scale_color_wa_d
-#' @rdname scale_wa
-#' @export
-scale_fill_wa_b = scale_fill_wa_d
+scale_colour_wa_b = scale_color_wa_b

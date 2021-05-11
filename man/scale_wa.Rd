@@ -5,30 +5,30 @@
 \alias{scale_fill_wa_d}
 \alias{scale_color_wa_c}
 \alias{scale_fill_wa_c}
+\alias{scale_color_wa_b}
+\alias{scale_fill_wa_b}
 \alias{scale_colour_wa_d}
 \alias{scale_colour_wa_c}
-\alias{scale_color_wa_b}
 \alias{scale_colour_wa_b}
-\alias{scale_fill_wa_b}
 \title{Color palettes for \code{ggplot2}}
 \usage{
 scale_color_wa_d(palette = "rainier", which = NULL, ..., reverse = FALSE)
 
 scale_fill_wa_d(palette = "rainier", which = NULL, ..., reverse = FALSE)
 
-scale_color_wa_c(palette = "ferries", which = NULL, ..., reverse = FALSE)
+scale_color_wa_c(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
 
-scale_fill_wa_c(palette = "ferries", which = NULL, ..., reverse = FALSE)
+scale_fill_wa_c(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
+
+scale_color_wa_b(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
+
+scale_fill_wa_b(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
 
 scale_colour_wa_d(palette = "rainier", which = NULL, ..., reverse = FALSE)
 
-scale_colour_wa_c(palette = "ferries", which = NULL, ..., reverse = FALSE)
+scale_colour_wa_c(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
 
-scale_color_wa_b(palette = "rainier", which = NULL, ..., reverse = FALSE)
-
-scale_colour_wa_b(palette = "rainier", which = NULL, ..., reverse = FALSE)
-
-scale_fill_wa_b(palette = "rainier", which = NULL, ..., reverse = FALSE)
+scale_colour_wa_b(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
 }
 \arguments{
 \item{palette}{a \verb{[wacolors]} palette or palette name.}
