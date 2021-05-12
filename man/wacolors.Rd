@@ -13,9 +13,19 @@ wacolors
 }
 \description{
 A collection of colorblind-friendly color palettes for various settings in
-the state of Washington.
+the state of Washington. Colors were extracted from a set of photographs, and
+then combined to form a set of continuous and discrete palettes.  Continuous
+palettes were designed to be perceptually uniform, while discrete palettes
+were chosen to maximize contrast at several different levels of overall
+brightness and saturation. Each palette has been evaluated to ensure colors
+are distinguishable by colorblind people.
 }
 \details{
+Discrete palettes contain at most seven colors.  Don't create graphics that
+use more than seven discrete colors.  You can color a map with four.
+Anything more risks confusion.  Consider differentiating through faceting or
+labels, instead.
+
 Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
 \itemize{
 \item \code{rainier}
