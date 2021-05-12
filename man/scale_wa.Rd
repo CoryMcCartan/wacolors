@@ -16,9 +16,21 @@ scale_color_wa_d(palette = "rainier", which = NULL, ..., reverse = FALSE)
 
 scale_fill_wa_d(palette = "rainier", which = NULL, ..., reverse = FALSE)
 
-scale_color_wa_c(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
+scale_color_wa_c(
+  palette = "sound_sunset",
+  which = NULL,
+  midpoint = NULL,
+  ...,
+  reverse = FALSE
+)
 
-scale_fill_wa_c(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
+scale_fill_wa_c(
+  palette = "sound_sunset",
+  which = NULL,
+  midpoint = NULL,
+  ...,
+  reverse = FALSE
+)
 
 scale_color_wa_b(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
 
@@ -26,12 +38,18 @@ scale_fill_wa_b(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
 
 scale_colour_wa_d(palette = "rainier", which = NULL, ..., reverse = FALSE)
 
-scale_colour_wa_c(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
+scale_colour_wa_c(
+  palette = "sound_sunset",
+  which = NULL,
+  midpoint = NULL,
+  ...,
+  reverse = FALSE
+)
 
 scale_colour_wa_b(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
 }
 \arguments{
-\item{palette}{a \verb{[wacolors]} palette or palette name.}
+\item{palette}{a \code{\link{wacolors}} palette or palette name.}
 
 \item{which}{if not \code{NULL}, the indices or names of a subset of colors to use.}
 
@@ -40,6 +58,11 @@ scale_colour_wa_b(palette = "sound_sunset", which = NULL, ..., reverse = FALSE)
 name, limits, breaks, labels and so forth.}
 
 \item{reverse}{\code{TRUE} if the colors should be reversed.}
+
+\item{midpoint}{if not \code{NULL} and at least one limit is not provided, the
+value to center the scale at. Useful for diverging scales.}
+
+\item{limits}{passed onto \code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}}}
 }
 \description{
 Color palettes for \code{ggplot2}

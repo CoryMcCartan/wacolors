@@ -3,7 +3,7 @@
 #' @param pal the palette colors
 #' @param reverse whether to reverse
 #'
-#' @importFrom grDevices colorRampPalette rgb
+#' @importFrom grDevices colorRampPalette
 discr_pal = function(pal, reverse=FALSE) {
     n_col = length(pal)
     names(pal) = NULL
@@ -20,11 +20,14 @@ discr_pal = function(pal, reverse=FALSE) {
 #'
 #' @rdname scale_wa
 #'
-#' @param palette a `[wacolors]` palette or palette name.
+#' @param palette a [`wacolors`] palette or palette name.
 #' @param which if not `NULL`, the indices or names of a subset of colors to use.
+#' @param midpoint if not `NULL` and at least one limit is not provided, the
+#'   value to center the scale at. Useful for diverging scales.
 #' @param ... Other arguments passed on to [ggplot2::discrete_scale()],
 #'   [ggplot2::continuous_scale()], or [ggplot2::binned_scale()] to control
 #'   name, limits, breaks, labels and so forth.
+#' @param limits passed onto [ggplot2::continuous_scale()]
 #' @param reverse `TRUE` if the colors should be reversed.
 #'
 #' @examples
@@ -74,22 +77,38 @@ scale_fill_wa_d = function(palette="rainier", which=NULL, ..., reverse=FALSE) {
 
 #' @rdname scale_wa
 #' @export
-scale_color_wa_c = function(palette="sound_sunset", which=NULL, ..., reverse=FALSE) {
+scale_color_wa_c = function(palette="sound_sunset", which=NULL, midpoint=NULL,
+                            ..., reverse=FALSE) {
     pal = match_pal(palette)
     if (!is.null(which)) pal$pal = pal$pal[which]
     if (reverse) pal$pal = rev(pal$pal)
 
-    scale_color_gradientn(..., colours=pal$pal)
+    if (is.null(midpoint)) {
+        rescaler = scales::rescale
+    } else {
+        rescaler = function(x, to=c(0, 1), from=range(x, na.rm=TRUE)) {
+            scales::rescale_mid(x, to, from, midpoint)
+        }
+    }
+    scale_color_gradientn(..., colours=pal$pal, rescaler=rescaler)
 }
 
 #' @rdname scale_wa
 #' @export
-scale_fill_wa_c = function(palette="sound_sunset", which=NULL, ..., reverse=FALSE) {
+scale_fill_wa_c = function(palette="sound_sunset", which=NULL, midpoint=NULL,
+                           ..., reverse=FALSE) {
     pal = match_pal(palette)
     if (!is.null(which)) pal$pal = pal$pal[which]
     if (reverse) pal$pal = rev(pal$pal)
 
-    scale_fill_gradientn(..., colours=pal$pal)
+    if (is.null(midpoint)) {
+        rescaler = scales::rescale
+    } else {
+        rescaler = function(x, to=c(0, 1), from=range(x, na.rm=TRUE)) {
+            scales::rescale_mid(x, to, from, midpoint)
+        }
+    }
+    scale_fill_gradientn(..., colours=pal$pal, rescaler=rescaler)
 }
 
 #' @rdname scale_wa

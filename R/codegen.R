@@ -30,8 +30,9 @@ pal_vector = function(palette, n, which=NULL,
 #'
 #' @param palette a `[wacolors]` palette or palette name.
 #' @param which if not `NULL`, the indices or names of a subset of colors to use.
-#' @param type Either `continuous` or `discrete`. Use `continuous` if you want
-#'   to automatically interpolate between colors.
+#' @param type Either `continuous`, `discrete`, or `binned`. Use `continuous` if
+#'   you want to automatically interpolate between colors. Custom scale midpoints
+#'   are not supported (see [scale_fill_wa_c()]).
 #' @param reverse `TRUE` if the colors should be reversed.
 #'
 #' @examples
@@ -74,12 +75,37 @@ pal_functions = function(palette, which=NULL, type=c("discrete", "continuous"),
         paste0(fname, " = function(...) {\n", pal_gen_code, "\n}\n")
     }
 
+    make_binned = function(aesthetic) {
+        pal_col_code = paste0("  pal_cols = c(", paste0('"', pal$pal, '"', collapse=", "), ")")
+        pal_col_code = paste0(strwrap(pal_col_code, 76, indent=2, exdent=15), collapse="\n")
+        pal_col_code = paste0(pal_col_code, "\n", "  n_col = length(pal_cols)\n")
+
+        pal_fun_code = "  ramp = grDevices::colorRampPalette(pal_cols)\n"
+        if (!(pal$name %in% cont_pal)) {
+            pal_fun_code = paste0(pal_fun_code, "  pal_fun = function(n) ",
+                                  "if (n <= n_col) pal_cols[1:n] else ramp(n)\n")
+        } else {
+            pal_fun_code = paste0(pal_fun_code, "  pal_fun = ramp\n")
+        }
+
+        pal_gen_code = paste0('  binned_scale("', aesthetic, '", "',
+                              pal$name, '", palette=pal_fun, ...)\n')
+        pal_gen_code = paste0(strwrap(pal_gen_code, 76, indent=2,
+                                      exdent=23 + (aesthetic=="color")), collapse="\n")
+        fname = paste0("scale_", aesthetic, "_", pal$name, "_b")
+        paste0(fname, " = function(...) {\n", pal_col_code,
+               pal_fun_code, pal_gen_code, "\n}\n")
+    }
+
     code = ""
     if ("discrete" %in% type) {
         code = paste0(code, make_discr("color"), make_discr("fill"), "\n")
     }
     if ("continuous" %in% type) {
         code = paste0(code, make_cont("color"), make_cont("fill"), "\n")
+    }
+    if ("binned" %in% type) {
+        code = paste0(code, make_binned("color"), make_binned("fill"), "\n")
     }
 
     code_output(code)

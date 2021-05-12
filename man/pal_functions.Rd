@@ -16,8 +16,9 @@ pal_functions(
 
 \item{which}{if not \code{NULL}, the indices or names of a subset of colors to use.}
 
-\item{type}{Either \code{continuous} or \code{discrete}. Use \code{continuous} if you want
-to automatically interpolate between colors.}
+\item{type}{Either \code{continuous}, \code{discrete}, or \code{binned}. Use \code{continuous} if
+you want to automatically interpolate between colors. Custom scale midpoints
+are not supported (see \code{\link[=scale_fill_wa_c]{scale_fill_wa_c()}}).}
 
 \item{reverse}{\code{TRUE} if the colors should be reversed.}
 }
