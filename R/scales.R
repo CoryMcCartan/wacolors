@@ -27,7 +27,6 @@ discr_pal = function(pal, reverse=FALSE) {
 #' @param ... Other arguments passed on to [ggplot2::discrete_scale()],
 #'   [ggplot2::continuous_scale()], or [ggplot2::binned_scale()] to control
 #'   name, limits, breaks, labels and so forth.
-#' @param limits passed onto [ggplot2::continuous_scale()]
 #' @param reverse `TRUE` if the colors should be reversed.
 #'
 #' @examples
@@ -39,13 +38,13 @@ discr_pal = function(pal, reverse=FALSE) {
 #'
 #' ggplot(mtcars, aes(mpg, wt)) +
 #'     geom_point(aes(color = hp)) +
-#'     scale_color_wa_c("seattle_night",  which=c("seafirst", "pike_clock"))
+#'     scale_color_wa_c("palouse",  which=c("snake", "wheat"))
 #'
 #' ggplot(diamonds) +
 #'     geom_bar(aes(x = cut, fill = clarity)) +
 #'     scale_fill_wa_d(wacolors$sound_sunset, reverse=TRUE)
 #'
-#' @importFrom ggplot2 discrete_scale scale_color_gradientn scale_fill_gradientn
+#' @importFrom ggplot2 discrete_scale binned_scale scale_color_gradientn scale_fill_gradientn
 #' @export
 scale_color_wa_d = function(palette="rainier", which=NULL, ..., reverse=FALSE) {
     pal = match_pal(palette)

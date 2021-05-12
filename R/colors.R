@@ -16,13 +16,13 @@
 #' @export
 wacolors = list(
     # DISCRETE
-    rainier = c(lake="#465177", ragwort="#E4C22B", lodge="#965229",
-               trees="#29483A", ground="#759C41", winter_sky="#9FB6DA",
+    rainier = c(lake="#465177", ragwort="#E4C22B", lodge="#965127",
+               trees="#29483A", ground="#759C44", winter_sky="#9FB6DA",
                paintbrush="#DF3383"),
     forest = c(trees="#254029", stream="#1E212F", fern="#516F25",
                bark="#3A270A", mountains="#40666F"),
     washington_pass = c(trees="#31543B", stone="#48628A", tips="#94AA3D",
-                        road="#7F9CB1", sunbreak="#D9D1BE", stump="#3D3F45"),
+                        road="#7F9CB1", sunbreak="#D9D1BE", stump="#3E3C3A"),
     palouse = c(snake="#2B3F4C", wheat="#C0A43D", fallow="#8A627C",
                 scrub="#7C8455", canyon="#D1BD98", sky="#69A2E4"),
     uw = c(purple="#483778", gold="#D5C58D", brick="#7E4837", cherry="#E08E9A",

@@ -61,8 +61,6 @@ name, limits, breaks, labels and so forth.}
 
 \item{midpoint}{if not \code{NULL} and at least one limit is not provided, the
 value to center the scale at. Useful for diverging scales.}
-
-\item{limits}{passed onto \code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}}}
 }
 \description{
 Color palettes for \code{ggplot2}
@@ -76,7 +74,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 ggplot(mtcars, aes(mpg, wt)) +
     geom_point(aes(color = hp)) +
-    scale_color_wa_c("seattle_night",  which=c("seafirst", "pike_clock"))
+    scale_color_wa_c("palouse",  which=c("snake", "wheat"))
 
 ggplot(diamonds) +
     geom_bar(aes(x = cut, fill = clarity)) +

@@ -1,7 +1,21 @@
+if (F) {
 # Tests and optimizations
 library(colorspace)
 library(ggplot2)
 
+
+#####
+ss_old = c("#41527A", "#5C7293", "#7389A6", "#90929C",
+           "#B09982", "#DDAD7A", "#F6E297")
+sound_sunset = divergingx_hcl(15, h1=-112, h2=-14, h3=72, l1=9, l2 = 52, l3 = 95,
+                              c1=18, cmax1=40, c2=26, cmax2=84, c3=82,
+                              p1=1.9, p2=1, p3=0.4, p4=1)
+specplot(sound_sunset, viridis::cividis(15))
+specplot(sound_sunset, viridis::magma(15))
+specplot(sound_sunset, viridis::inferno(15))
+specplot(ss_old, sound_sunset[c(2,4,6,8,10,12,14)])
+plot_hl(sound_sunset)
+tvc(sound_sunset)
 
 #####
 sea_star = sequential_hcl(15, h=c(-50, 48), l=c(15, 80),
@@ -23,19 +37,6 @@ specplot(vantage)
 plot_hl(vantage)
 tvc(vantage)
 
-
-#####
-ss_old = c("#41527A", "#5C7293", "#7389A6", "#90929C",
-           "#B09982", "#DDAD7A", "#F6E297")
-sound_sunset = divergingx_hcl(15, h1=-112, h2=-14, h3=72, l1=9, l2 = 52, l3 = 95,
-                              c1=18, cmax1=40, c2=26, cmax2=84, c3=82,
-                              p1=1.9, p2=1, p3=0.4, p4=1)
-specplot(sound_sunset, viridis::cividis(15))
-specplot(sound_sunset, viridis::magma(15))
-specplot(sound_sunset, viridis::inferno(15))
-specplot(ss_old, sound_sunset[c(2,4,6,8,10,12,14)])
-plot_hl(sound_sunset)
-tvc(sound_sunset)
 
 #####
 ff_old = c("#3A2620", "#7A4424", "#CD5A0D", "#FE8B00", "#FFD874")
@@ -158,4 +159,6 @@ tvc = function(palette) {
     code = paste0(strwrap(code, 76, indent=0, exdent=nchar(varname) + 5),
                   collapse="\n")
     code_output(code)
+}
+
 }
