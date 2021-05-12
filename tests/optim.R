@@ -1,24 +1,32 @@
 # Tests and optimizations
 library(colorspace)
-library(shades)
 library(ggplot2)
 
 
-
 #####
-sea_star = c(sequential_hcl(13, h=c(-25, 84), l=c(18, 87),
-                            c=c(36, 75), cmax=77, power=c(1.5, 1.1)),
-             sequential_hcl(13, h=c(84, 220), l=c(87, 18), c=c(75, 25),
-                            cmax=76, power=c(0.5, 0.95))[-1])
-specplot(sea_star)
+sea_star = sequential_hcl(15, h=c(-50, 48), l=c(15, 80),
+                          c=c(35, 90), cmax=98, power=c(2.2, 1))
+sea_star = divergingx_hcl(15, h1=-50, h2=25, h3=48, l1=15, l2 = 48, l3 = 81,
+                          c1=35, cmax1=70, c2=35, cmax2=98, c3=90,
+                          p1=0.8, p2=1, p3=0.6, p4=1)
+specplot(sea_star, sound_sunset)
 plot_hl(sea_star)
 tvc(sea_star)
 
 
 #####
+vantage = divergingx_hcl(15, h1=290, h2=110, h3=30, l1=30, l2 = 98, l3 = 30,
+                         c1=40, cmax1=10, c2=15, cmax2=70, c3=50,
+                         p1=0.5, p2=1, p3=0.4, p4=1)
+plot_hl(vantage)
+specplot(vantage)
+tvc(vantage)
+
+
+#####
 ss_old = c("#41527A", "#5C7293", "#7389A6", "#90929C",
            "#B09982", "#DDAD7A", "#F6E297")
-sound_sunset = divergingx_hcl(15, h1=-112, h2=-14, h3=72, l1=11, l2 = 52, l3 = 93,
+sound_sunset = divergingx_hcl(15, h1=-112, h2=-14, h3=72, l1=11, l2 = 53, l3 = 95,
                               c1=18, cmax1=50, c2=28, cmax2=92, c3=80,
                               p1=1.9, p2=1, p3=0.4, p4=1)
 specplot(sound_sunset, viridis::cividis(15))
@@ -40,7 +48,7 @@ tvc(forest_fire)
 
 #####
 sea = sequential_hcl(15, h=c(270, 170), l=c(10, 88),
-                     c=c(20, 30), cmax=56, power=c(3.0, 1))
+                     c=c(18, 22), cmax=50, power=c(3.0, 1))
 specplot(sea)
 plot_hl(sea)
 tvc(sea)
