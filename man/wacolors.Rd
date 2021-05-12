@@ -34,9 +34,11 @@ Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
 \item \code{sea_star}
 \item \code{volcano}
 \item \code{baker}
+\item \code{diablo}
 \item \code{mountains}
+\item \code{gorge}
 \item \code{foothills_winter}
-\item \code{mountains_sound}
+\item \code{olympic}
 \item \code{vantage}
 }
 }

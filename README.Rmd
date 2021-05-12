@@ -74,7 +74,7 @@ You can use the `wa_pal` function to directly construct a discretized/binned
 color scale.
 ```{r heatmap}
 image(volcano, col=wa_pal("ferries", 12))
-image(volcano, col=wa_pal("volcano", 80, reverse=TRUE))
+image(volcano, col=wa_pal("vantage", 200, reverse=TRUE))
 ```
 
 ### Code Generation
@@ -92,8 +92,9 @@ pal_functions("palouse")
 
 ### Continuous Palettes
 ```{r cont-palettes, echo=F, fig.height=1, out.width=NULL}
-cont_pal = c("sound_sunset", "ferries", "forest_fire", "sea", "mountains_sound",
-             "sea_star", "volcano", "baker", "mountains", "foothills_winter")
+cont_pal = c("sound_sunset", "ferries", "forest_fire", "sea_star", "sea",
+             "volcano", "baker", "diablo", "mountains", "gorge",
+             "foothills_winter", "olympic", "vantage")
 
 for (pal in cont_pal) {
     plot(wa_pal(pal, 256))

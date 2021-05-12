@@ -10,7 +10,7 @@
 
 ![Mt. Rainier](cover.jpg)
 
-The `wacolor` package contains 19 color palettes taken from the
+The `wacolor` package contains 22 color palettes taken from the
 landscapes and cities of Washington state. Colors were extracted from a
 set of photographs, and then combined to form a set of continuous and
 discrete palettes. Continuous palettes were designed to be perceptually
@@ -48,8 +48,9 @@ names(wacolors)
 #>  [1] "rainier"          "forest"           "washington_pass"  "palouse"         
 #>  [5] "uw"               "larch"            "fort_worden"      "coast"           
 #>  [9] "flag"             "sound_sunset"     "ferries"          "forest_fire"     
-#> [13] "sea"              "mountains_sound"  "sea_star"         "volcano"         
-#> [17] "baker"            "mountains"        "foothills_winter"
+#> [13] "sea"              "sea_star"         "volcano"          "baker"           
+#> [17] "diablo"           "mountains"        "gorge"            "foothills_winter"
+#> [21] "olympic"          "vantage"
 
 # See one palette
 wacolors$rainier
@@ -88,7 +89,7 @@ image(volcano, col=wa_pal("ferries", 12))
 <img src="man/figures/README-heatmap-1.png" width="100%" />
 
 ``` r
-image(volcano, col=wa_pal("volcano", 80, reverse=TRUE))
+image(volcano, col=wa_pal("vantage", 200, reverse=TRUE))
 ```
 
 <img src="man/figures/README-heatmap-2.png" width="100%" />
@@ -102,9 +103,9 @@ code will be loaded, ready to copy, at the console prompt.
 
 ``` r
 pal_vector("sound_sunset", 15)
-#> PAL_SOUND_SUNSET = c("#001F39", "#1D2654", "#40296B", "#5E2F74", "#6F3F73",
-#>                      "#7F4F75", "#8D5F7A", "#9D6F81", "#CD6E85", "#E47C7F",
-#>                      "#F58F74", "#FFA363", "#FFBB58", "#FFD360", "#FFEA73")
+#> PAL_SOUND_SUNSET = c("#001B38", "#1B234C", "#3B295E", "#56316A", "#69406C",
+#>                      "#7A5072", "#8A6078", "#9B7080", "#C67387", "#DC8386",
+#>                      "#EE9581", "#FCAA79", "#FFC071", "#FFD86B", "#FFF075")
 
 pal_functions("palouse")
 #> scale_color_palouse_d = function(...) {
@@ -140,7 +141,7 @@ pal_functions("palouse")
 
 ### Continuous Palettes
 
-![](man/figures/README-cont-palettes-1.png)<!-- -->![](man/figures/README-cont-palettes-2.png)<!-- -->![](man/figures/README-cont-palettes-3.png)<!-- -->![](man/figures/README-cont-palettes-4.png)<!-- -->![](man/figures/README-cont-palettes-5.png)<!-- -->![](man/figures/README-cont-palettes-6.png)<!-- -->![](man/figures/README-cont-palettes-7.png)<!-- -->![](man/figures/README-cont-palettes-8.png)<!-- -->![](man/figures/README-cont-palettes-9.png)<!-- -->![](man/figures/README-cont-palettes-10.png)<!-- -->
+![](man/figures/README-cont-palettes-1.png)<!-- -->![](man/figures/README-cont-palettes-2.png)<!-- -->![](man/figures/README-cont-palettes-3.png)<!-- -->![](man/figures/README-cont-palettes-4.png)<!-- -->![](man/figures/README-cont-palettes-5.png)<!-- -->![](man/figures/README-cont-palettes-6.png)<!-- -->![](man/figures/README-cont-palettes-7.png)<!-- -->![](man/figures/README-cont-palettes-8.png)<!-- -->![](man/figures/README-cont-palettes-9.png)<!-- -->![](man/figures/README-cont-palettes-10.png)<!-- -->![](man/figures/README-cont-palettes-11.png)<!-- -->![](man/figures/README-cont-palettes-12.png)<!-- -->![](man/figures/README-cont-palettes-13.png)<!-- -->
 
 ### Discrete Palettes
 

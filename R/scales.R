@@ -7,7 +7,7 @@
 discr_pal = function(pal, reverse=FALSE) {
     n_col = length(pal)
     names(pal) = NULL
-    ramp = colorRampPalette(pal)
+    ramp = colorRampPalette(pal, space="Lab", interpolate="spline")
     function(n) {
         if (n <= n_col)
             pal[1:n]
@@ -53,7 +53,7 @@ scale_color_wa_d = function(palette="rainier", which=NULL, ..., reverse=FALSE) {
     if (reverse) pal$pal = rev(pal$pal)
 
     if (pal$name %in% cont_pal)
-        pal_fun = colorRampPalette(pal$pal)
+        pal_fun = colorRampPalette(pal$pal, space="Lab", interpolate="spline")
     else
         pal_fun = discr_pal(pal$pal)
 
@@ -68,7 +68,7 @@ scale_fill_wa_d = function(palette="rainier", which=NULL, ..., reverse=FALSE) {
     if (reverse) pal$pal = rev(pal$pal)
 
     if (pal$name %in% cont_pal)
-        pal_fun = colorRampPalette(pal$pal)
+        pal_fun = colorRampPalette(pal$pal, space="Lab", interpolate="spline")
     else
         pal_fun = discr_pal(pal$pal)
 
