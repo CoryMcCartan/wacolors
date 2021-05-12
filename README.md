@@ -55,7 +55,7 @@ names(wacolors)
 # See one palette
 wacolors$rainier
 #>       lake    ragwort      lodge      trees     ground winter_sky paintbrush 
-#>  "#465177"  "#E4C22B"  "#965229"  "#29483A"  "#759C41"  "#9FB6DA"  "#DF3383"
+#>  "#465177"  "#E4C22B"  "#965127"  "#29483A"  "#759C44"  "#9FB6DA"  "#DF3383"
 ```
 
 The package comes with `ggplot2`-compatible scales which are easy to
@@ -68,7 +68,7 @@ ggplot(mtcars, aes(mpg, wt)) +
     scale_color_wa_d("rainier")
 ```
 
-<img src="man/figures/README-ggplot-1.png" width="100%" />
+![](man/figures/README-ggplot-1.png)<!-- -->
 
 ``` r
 # or access using `wacolors$...`
@@ -77,7 +77,7 @@ ggplot(diamonds) +
     scale_fill_wa_d(wacolors$sound_sunset, reverse=TRUE)
 ```
 
-<img src="man/figures/README-ggplot-2.png" width="100%" />
+![](man/figures/README-ggplot-2.png)<!-- -->
 
 You can use the `wa_pal` function to directly construct a
 discretized/binned color scale.
@@ -86,13 +86,13 @@ discretized/binned color scale.
 image(volcano, col=wa_pal("ferries", 12))
 ```
 
-<img src="man/figures/README-heatmap-1.png" width="100%" />
+![](man/figures/README-heatmap-1.png)<!-- -->
 
 ``` r
 image(volcano, col=wa_pal("vantage", 200, reverse=TRUE))
 ```
 
-<img src="man/figures/README-heatmap-2.png" width="100%" />
+![](man/figures/README-heatmap-2.png)<!-- -->
 
 ### Code Generation
 

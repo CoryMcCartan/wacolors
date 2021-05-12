@@ -58,7 +58,7 @@ wacolors$rainier
 ```
 
 The package comes with `ggplot2`-compatible scales which are easy to use.
-```{r ggplot}
+```{r ggplot, out.width=NULL}
 # access by name
 ggplot(mtcars, aes(mpg, wt)) +
     geom_point(aes(color = factor(cyl), size=hp)) +
@@ -72,7 +72,7 @@ ggplot(diamonds) +
 
 You can use the `wa_pal` function to directly construct a discretized/binned
 color scale.
-```{r heatmap}
+```{r heatmap, out.width=NULL}
 image(volcano, col=wa_pal("ferries", 12))
 image(volcano, col=wa_pal("vantage", 200, reverse=TRUE))
 ```
