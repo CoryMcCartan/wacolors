@@ -2,9 +2,10 @@
 #' @param name the name of the palette or the palette itself
 match_pal = function(name) {
     found_name = pmatch(name, names(wacolors))
-    if (!any(is.na(found_name))) {
+    if (length(found_name) > 0 && !any(is.na(found_name))) {
         pal = wacolors[[found_name]]
-    } else if (all(is.na(found_name)) && all(startsWith(name, "#"))) {
+    } else if (all(is.na(found_name)) && is.character(name) &&
+               all(startsWith(name, "#"))) {
         pal = name
         try_match = vapply(wacolors, FUN=function(x) isTRUE(all.equal(x, pal)),
                            FUN.VALUE=logical(1))

@@ -5,8 +5,8 @@
 \alias{wacolors}
 \title{Washington State Color Palettes}
 \format{
-A list of character vectors containing the color palettes. Some
-vectors may contain names for each color.
+A list of character vectors containing the color palettes. Discrete
+palette vectors contain names for each color.
 }
 \usage{
 wacolors
@@ -19,39 +19,29 @@ the state of Washington.
 Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
 \itemize{
 \item \code{rainier}
-\item \code{rainier_meadow}
-\item \code{larch}
 \item \code{forest}
-\item \code{understory}
-\item \code{seattle_night}
-\item \code{seattle_fall}
-\item \code{pike_place}
-\item \code{fort_worden}
-\item \code{chambers_bay}
-\item \code{stuart}
-\item \code{sound_sunset}
 \item \code{washington_pass}
-\item \code{winthrop}
-\item \code{ross_lake}
-\item \code{winter_mountain}
-\item \code{library}
-\item \code{ferries}
-\item \code{volcano}
-\item \code{locks}
-\item \code{deception_pass}
-\item \code{scrubland}
 \item \code{palouse}
-\item \code{grand_coulee}
-\item \code{chihuly}
-\item \code{plane_view}
-\item \code{UW}
+\item \code{uw}
+\item \code{larch}
+\item \code{fort_worden}
+\item \code{coast}
 \item \code{flag}
-\item \code{tartan}
+\item \code{sound_sunset}
+\item \code{ferries}
+\item \code{forest_fire}
+\item \code{sea}
+\item \code{mountains_sound}
+\item \code{sea_star}
+\item \code{volcano}
+\item \code{baker}
+\item \code{mountains}
+\item \code{foothills_winter}
 }
 }
 \examples{
 wacolors$rainier
-wacolors$seattle_night[1:2]
+wacolors$palouse[1:4]
 
 }
 \keyword{datasets}

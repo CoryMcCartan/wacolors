@@ -4,22 +4,26 @@ Version: 0.1.2
 Authors@R: 
     person("Cory", "McCartan", role = c("aut", "cre"),
            email = "cmccartan@g.harvard.edu")
-Description:  Color palettes taken from the landscapes and cities of Washington 
-    state. Each color was extracted from a photograph, with minor alterations 
-    made to improve balance.  The palettes were evaluated to
-    ensure colors are distinguishable, but some palettes risk more 
-    confusion than others, especially at small scales.
+Description: Color palettes taken from the landscapes and cities of Washington 
+    state. Colors were extracted from a set of photographs, and then combined to 
+    form a set of continuous and discrete palettes.  Continuous palettes were 
+    designed to be perceptually uniform, while discrete palettes were chosen to
+    maximize contrast at several different levels of overall brightness and 
+    saturation. Each palette has been evaluated to ensure colors are 
+    distinguishable by colorblind people.
 Depends:
     R (>= 3.0)
 Imports:
     graphics,
     grDevices,
-    ggplot2
+    ggplot2,
+    scales
 Suggests: 
     knitr,
     rmarkdown,
     testthat (>= 3.0.0),
     colorspace,
+    shade,
     rstudioapi
 License: MIT + file LICENSE
 Encoding: UTF-8

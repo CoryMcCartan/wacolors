@@ -22,11 +22,18 @@ knitr::opts_chunk$set(
 ![Mt. Rainier](cover.jpg)
 
 The `wacolor` package contains `r length(wacolors::wacolors)` color palettes
-taken from the landscapes and cities of Washington state. Each color was
-extracted from a photograph, with minor alterations made to improve balance 
-and desaturability. The palettes were evaluated  to ensure colors are
-distinguishable, but some palettes risk more confusion than others, especially
-at small scales.
+taken from the landscapes and cities of Washington state. Colors were 
+extracted from a set of photographs, and then combined to form a set of 
+continuous and discrete palettes.  Continuous palettes were designed to
+be perceptually uniform, while discrete palettes were chosen to maximize
+contrast at several different levels of overall brightness and saturation.
+Each palette has been evaluated to ensure colors are distinguishable by
+colorblind people.
+
+Discrete palettes contain at most seven colors.  Don't create graphics that
+use more than seven discrete colors.  You can color a map with four.  Anything
+more risks confusion.  Consider differentiating through faceting or labels,
+instead.
 
 ## Installation
 <!-- You can install the released version of wacolors from [CRAN](https://CRAN.R-project.org) with: -->
@@ -55,7 +62,7 @@ The package comes with `ggplot2`-compatible scales which are easy to use.
 # access by name
 ggplot(mtcars, aes(mpg, wt)) +
     geom_point(aes(color = factor(cyl), size=hp)) +
-    scale_color_wa_d("seattle_night")
+    scale_color_wa_d("rainier")
 
 # or access using `wacolors$...`
 ggplot(diamonds) +
@@ -78,24 +85,24 @@ ready to copy, at the console prompt.
 ```{r}
 pal_vector("sound_sunset", 15)
 
-pal_functions("locks")
+pal_functions("palouse")
 ```
 
 ## The Palettes
 
 ### Continuous Palettes
 ```{r cont-palettes, echo=F, fig.height=1, out.width=NULL}
-cont_pal = c("sound_sunset", "understory", "winter_mountain", "ferries", 
-             "forest_fire", "volcano", "locks", "plane_view")
+cont_pal = c("sound_sunset", "ferries", "forest_fire", "sea", "mountains_sound",
+             "sea_star", "volcano", "baker", "mountains", "foothills_winter")
 
 for (pal in cont_pal) {
     plot(wa_pal(pal, 256))
 }
 ```
 
-### All Palettes
+### Discrete Palettes
 ```{r disc-palettes, echo=F, fig.height=1, out.width=NULL}
-for (pal in names(wacolors)) {
+for (pal in setdiff(names(wacolors), cont_pal)) {
     plot(wa_pal(pal))
 }
 ```
