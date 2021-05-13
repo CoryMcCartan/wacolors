@@ -1,6 +1,6 @@
 Package: wacolors
 Title: Colorblind-Friendly Palettes from Washington State
-Version: 0.1.2
+Version: 0.2.0
 Authors@R: 
     person("Cory", "McCartan", role = c("aut", "cre"),
            email = "cmccartan@g.harvard.edu")
@@ -27,7 +27,6 @@ Suggests:
     rstudioapi
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Config/testthat/edition: 3

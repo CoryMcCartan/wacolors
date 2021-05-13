@@ -1,4 +1,10 @@
-# wacolors 0.1.2
+# wacolors 0.2.0
+
+* New, perceptually uniform palettes
+* New discrete palettes systematically checked for CVD compatibility
+* Support for changing midpoint of diverging palettes
+
+# wacolors 0.1.3
 
 * Fix tests
 
