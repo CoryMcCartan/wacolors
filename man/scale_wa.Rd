@@ -62,6 +62,9 @@ name, limits, breaks, labels and so forth.}
 \item{midpoint}{if not \code{NULL} and at least one limit is not provided, the
 value to center the scale at. Useful for diverging scales.}
 }
+\value{
+A \link[ggplot2:ggplot2-ggproto]{ggplot2::Scale} object.
+}
 \description{
 Color palettes for \code{ggplot2}
 }

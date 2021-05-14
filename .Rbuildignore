@@ -4,4 +4,6 @@
 ^README\.Rmd$
 ^cover.jpg$
 ^\.github$
-^cran-comments.md$
+^cran-comments\.md$
+^tests/optim\.R$
+^CRAN-RELEASE$

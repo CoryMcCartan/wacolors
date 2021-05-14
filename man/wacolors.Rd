@@ -29,13 +29,14 @@ labels, instead.
 Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
 \itemize{
 \item \code{rainier}
-\item \code{forest}
 \item \code{washington_pass}
 \item \code{palouse}
-\item \code{uw}
+\item \code{forest}
 \item \code{larch}
-\item \code{fort_worden}
 \item \code{coast}
+\item \code{uw}
+\item \code{fort_worden}
+\item \code{skagit}
 \item \code{flag}
 \item \code{sound_sunset}
 \item \code{ferries}
@@ -47,7 +48,7 @@ Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
 \item \code{diablo}
 \item \code{mountains}
 \item \code{gorge}
-\item \code{foothills_winter}
+\item \code{foothills}
 \item \code{olympic}
 \item \code{vantage}
 }

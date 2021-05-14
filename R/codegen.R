@@ -6,6 +6,8 @@
 #'
 #' @inheritParams wa_pal
 #'
+#' @return The generated code, invisibly, as a character vector.
+#'
 #' @examples
 #' pal_vector("rainier", 4)
 #'
@@ -19,6 +21,7 @@ pal_vector = function(palette, n, which=NULL,
     code = paste0(strwrap(code, 76, indent=0, exdent=nchar(varname) + 5),
                   collapse="\n")
     code_output(code)
+    invisible(code)
 }
 
 #' Output a character vector containing code for a `ggplot2` scale
@@ -34,6 +37,8 @@ pal_vector = function(palette, n, which=NULL,
 #'   you want to automatically interpolate between colors. Custom scale midpoints
 #'   are not supported (see [scale_fill_wa_c()]).
 #' @param reverse `TRUE` if the colors should be reversed.
+#'
+#' @return The generated code, invisibly, as a character vector.
 #'
 #' @examples
 #' pal_functions("rainier")
@@ -109,5 +114,6 @@ pal_functions = function(palette, which=NULL, type=c("discrete", "continuous"),
     }
 
     code_output(code)
+    invisible(code)
 }
 

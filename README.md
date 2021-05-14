@@ -10,7 +10,7 @@
 
 ![Mt. Rainier](cover.jpg)
 
-The `wacolor` package contains 22 color palettes taken from the
+The `wacolor` package contains 23 color palettes taken from the
 landscapes and cities of Washington state. Colors were extracted from a
 set of photographs, and then combined to form a set of continuous and
 discrete palettes. Continuous palettes were designed to be perceptually
@@ -45,12 +45,12 @@ library(ggplot2)
 
 # See all palettes
 names(wacolors)
-#>  [1] "rainier"          "forest"           "washington_pass"  "palouse"         
-#>  [5] "uw"               "larch"            "fort_worden"      "coast"           
-#>  [9] "flag"             "sound_sunset"     "ferries"          "forest_fire"     
-#> [13] "sea"              "sea_star"         "volcano"          "baker"           
-#> [17] "diablo"           "mountains"        "gorge"            "foothills_winter"
-#> [21] "olympic"          "vantage"
+#>  [1] "rainier"         "washington_pass" "palouse"         "forest"         
+#>  [5] "larch"           "coast"           "uw"              "fort_worden"    
+#>  [9] "skagit"          "flag"            "sound_sunset"    "ferries"        
+#> [13] "forest_fire"     "sea"             "sea_star"        "volcano"        
+#> [17] "baker"           "diablo"          "mountains"       "gorge"          
+#> [21] "foothills"       "olympic"         "vantage"
 
 # See one palette
 wacolors$rainier
@@ -103,13 +103,13 @@ code will be loaded, ready to copy, at the console prompt.
 
 ``` r
 pal_vector("sound_sunset", 15)
-#> PAL_SOUND_SUNSET = c("#001B38", "#1B234C", "#3B295E", "#56316A", "#69406C",
-#>                      "#7A5072", "#8A6078", "#9B7080", "#C67387", "#DC8386",
-#>                      "#EE9581", "#FCAA79", "#FFC071", "#FFD86B", "#FFF075")
+#> PAL_SOUND_SUNSET = c("#001E35", "#0E2648", "#342C59", "#523368", "#6D3D71",
+#>                      "#804C73", "#925B78", "#A16C7B", "#BB797D", "#D08B79",
+#>                      "#DE9F71", "#E6B465", "#EBCC5B", "#E6E55B", "#DCFF6C")
 
 pal_functions("palouse")
 #> scale_color_palouse_d = function(...) {
-#>   pal_cols = c("#2B3F4C", "#C0A43D", "#8A627C", "#7C8455", "#D1BD98",
+#>   pal_cols = c("#2D3F4A", "#C0A43D", "#8A6172", "#748A52", "#CCBA98",
 #>                "#69A2E4")
 #>   n_col = length(pal_cols)
 #>   ramp = grDevices::colorRampPalette(pal_cols)
@@ -117,7 +117,7 @@ pal_functions("palouse")
 #>   discrete_scale("color", "palouse", palette=pal_fun, ...)
 #> }
 #> scale_fill_palouse_d = function(...) {
-#>   pal_cols = c("#2B3F4C", "#C0A43D", "#8A627C", "#7C8455", "#D1BD98",
+#>   pal_cols = c("#2D3F4A", "#C0A43D", "#8A6172", "#748A52", "#CCBA98",
 #>                "#69A2E4")
 #>   n_col = length(pal_cols)
 #>   ramp = grDevices::colorRampPalette(pal_cols)
@@ -126,12 +126,12 @@ pal_functions("palouse")
 #> }
 #> 
 #> scale_color_palouse_c = function(...) {
-#>   scale_color_gradientn(..., colours=c("#2B3F4C", "#C0A43D", "#8A627C",
-#>                         "#7C8455", "#D1BD98", "#69A2E4"))
+#>   scale_color_gradientn(..., colours=c("#2D3F4A", "#C0A43D", "#8A6172",
+#>                         "#748A52", "#CCBA98", "#69A2E4"))
 #> }
 #> scale_fill_palouse_c = function(...) {
-#>   scale_fill_gradientn(..., colours=c("#2B3F4C", "#C0A43D", "#8A627C",
-#>                        "#7C8455", "#D1BD98", "#69A2E4"))
+#>   scale_fill_gradientn(..., colours=c("#2D3F4A", "#C0A43D", "#8A6172",
+#>                        "#748A52", "#CCBA98", "#69A2E4"))
 #> }
 #> 
 #> 
@@ -145,4 +145,4 @@ pal_functions("palouse")
 
 ### Discrete Palettes
 
-![](man/figures/README-disc-palettes-1.png)<!-- -->![](man/figures/README-disc-palettes-2.png)<!-- -->![](man/figures/README-disc-palettes-3.png)<!-- -->![](man/figures/README-disc-palettes-4.png)<!-- -->![](man/figures/README-disc-palettes-5.png)<!-- -->![](man/figures/README-disc-palettes-6.png)<!-- -->![](man/figures/README-disc-palettes-7.png)<!-- -->![](man/figures/README-disc-palettes-8.png)<!-- -->![](man/figures/README-disc-palettes-9.png)<!-- -->
+![](man/figures/README-disc-palettes-1.png)<!-- -->![](man/figures/README-disc-palettes-2.png)<!-- -->![](man/figures/README-disc-palettes-3.png)<!-- -->![](man/figures/README-disc-palettes-4.png)<!-- -->![](man/figures/README-disc-palettes-5.png)<!-- -->![](man/figures/README-disc-palettes-6.png)<!-- -->![](man/figures/README-disc-palettes-7.png)<!-- -->![](man/figures/README-disc-palettes-8.png)<!-- -->![](man/figures/README-disc-palettes-9.png)<!-- -->![](man/figures/README-disc-palettes-10.png)<!-- -->

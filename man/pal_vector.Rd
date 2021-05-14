@@ -26,6 +26,9 @@ to automatically interpolate between colors.}
 
 \item{reverse}{\code{TRUE} if palette should be reversed.}
 }
+\value{
+The generated code, invisibly, as a character vector.
+}
 \description{
 Call this function to get the code for a character vector containing a
 palette.  If using RStudio, the code will be loaded at the console prompt;

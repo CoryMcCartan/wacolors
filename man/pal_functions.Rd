@@ -22,6 +22,9 @@ are not supported (see \code{\link[=scale_fill_wa_c]{scale_fill_wa_c()}}).}
 
 \item{reverse}{\code{TRUE} if the colors should be reversed.}
 }
+\value{
+The generated code, invisibly, as a character vector.
+}
 \description{
 Call this function to get the code for the \verb{scale_*} functions for a palette.
 If using RStudio, the code will be loaded at the console prompt;

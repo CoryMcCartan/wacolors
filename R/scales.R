@@ -4,6 +4,9 @@
 #' @param reverse whether to reverse
 #'
 #' @importFrom grDevices colorRampPalette
+#'
+#' @keywords internal
+#' @noRd
 discr_pal = function(pal, reverse=FALSE) {
     n_col = length(pal)
     names(pal) = NULL
@@ -28,6 +31,8 @@ discr_pal = function(pal, reverse=FALSE) {
 #'   [ggplot2::continuous_scale()], or [ggplot2::binned_scale()] to control
 #'   name, limits, breaks, labels and so forth.
 #' @param reverse `TRUE` if the colors should be reversed.
+#'
+#' @return A [ggplot2::Scale] object.
 #'
 #' @examples
 #' library(ggplot2)

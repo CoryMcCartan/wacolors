@@ -1,5 +1,8 @@
 #' Takes name of palette or palette itself and returns palette + name
 #' @param name the name of the palette or the palette itself
+#'
+#' @keywords internal
+#' @noRd
 match_pal = function(name) {
     found_name = pmatch(name, names(wacolors))
     if (length(found_name) > 0 && !any(is.na(found_name))) {
@@ -16,29 +19,6 @@ match_pal = function(name) {
 
     list(pal=pal, name=name)
 }
-
-#' Create HTML code to view palette
-#'
-#' @param x the `palette` object
-#' @param maxwidth the maximum width of the output, in CSS units
-#' @param height the height width of the output, in CSS units
-#'
-#' @export
-palette_html = function(x, maxwidth="30em", height="1em") {
-    n <- length(x)
-
-    cat('<div class="color-palette">',
-        '<span style="text-weight: bold">', attr(x, "name"), '</span>',
-        '<div style="display: flex; flex-direction: row; width: 100%; ',
-            'height: ', height, '; max-width: ', maxwidth, ';">',
-            paste0('<div style="flex-grow: 1; background: ', x,
-                   ';"></div>', collapse=""),
-        '</div>',
-        '</div>', sep="")
-
-    invisible(x)
-}
-
 
 # `print.palette` modified from that in `wesanderson` (c) 2016 Karthik Ram
 #' @export
@@ -81,6 +61,7 @@ plot.palette = function(x, ...) {
 
 #' Paste-to-hex
 #' @keywords internal
+#' @noRd
 pth = function(x) {
     rgb = as.list(as.integer(strsplit(x, "\\s")[[1]]) / 256)
     col = do.call(colorspace::sRGB, rgb)

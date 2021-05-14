@@ -1,3 +1,9 @@
+# wacolors 0.2.1
+
+* Improve documentation
+* Slight modifications to existing palettes
+* New `skagit` palette
+
 # wacolors 0.2.0
 
 * New, perceptually uniform palettes
