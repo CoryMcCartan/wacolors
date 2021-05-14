@@ -1,6 +1,6 @@
 Package: wacolors
 Title: Colorblind-Friendly Palettes from Washington State
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: 
     person("Cory", "McCartan", role = c("aut", "cre"),
            email = "cmccartan@g.harvard.edu")
