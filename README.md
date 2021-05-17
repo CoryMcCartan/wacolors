@@ -26,12 +26,17 @@ or labels, instead.
 
 ## Installation
 
-<!-- You can install the released version of wacolors from [CRAN](https://CRAN.R-project.org) with: -->
-
-You can install `wacolors` from GitHub with:
+You can install the released version of `wacolors` from
+[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-devtools::install_github("CoryMcCartan/wacolors@release")
+install.packages("wacolors")
+```
+
+You can install the development version of `wacolors` from GitHub with:
+
+``` r
+devtools::install_github("CoryMcCartan/wacolors")
 ```
 
 ## Usage
