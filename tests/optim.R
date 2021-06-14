@@ -87,13 +87,6 @@ plot_hl(mountains)
 plot_hl(sea)
 tvc(mountains)
 
-# foothills####
-foothills = sequential_hcl(15, h=c(80, 220), l=c(5, 92),
-                                  c=c(20, 5), cmax=27, power=c(2.0, 1.0))
-specplot(foothills)
-plot_hl(foothills)
-tvc(foothills)
-
 # baker ####
 wm = c("#4D6E9F", "#9CB3DC", "#D0C5D1", "#F3ECE2", "#F1F1F1")
 specplot(wm)
@@ -123,9 +116,17 @@ testpal(gorge)
 plot_hl(gorge)
 tvc(gorge)
 
+# foothills####
+foothills = sequential_hcl(15, h=c(205, 90), l=c(4, 76),
+                                  c=c(16, 12), cmax=68, power=c(0.6, 1.0))
+specplot(foothills, gorge)
+plot_hl(foothills)
+testpal(foothills)
+tvc(foothills)
+
 # olympic ####
-olympic = divergingx_hcl(15, h1=130, h2=190, h3=280, l1=15, l2=95, l3=15,
-                         c1=10, cmax1=45, c2=0, cmax2=45, c3=15,
+olympic = divergingx_hcl(15, h1=120, h2=NA, h3=266, l1=18, l2=85, l3=18,
+                         c1=10, cmax1=45, c2=5, cmax2=45, c3=15,
                          p1=1.4, p2=1, p3=1.4, p4=1) %>%
     rev()
 specplot(olympic)
@@ -135,9 +136,13 @@ tvc(olympic)
 
 
 # vantage ####
-vantage = divergingx_hcl(15, h1=290, h2=136, h3=24, l1=25, l2 = 98, l3 = 25,
-                         c1=36, cmax1=10, c2=15, cmax2=64, c3=45,
-                         p1=0.5, p2=1, p3=0.4, p4=1)
+vantage = c(divergingx_hcl(8, h1=280, h2=270, h3=144,
+                            l1=25, l2=60, l3=95,
+                            c1=36, cmax1=46, c2=24, c3=10, p1=0.5, p3=0.8)[-8],
+            hcl(96, 10, 95),
+            divergingx_hcl(8, h1=84, h2=76, h3=24,
+                           l1=95, l2=60, l3=25,
+                           c1=32, cmax1=68, c2=52, cmax2=60, c3=44, p1=0.9, p3=0.4)[-1])
 specplot(vantage)
 testpal(vantage)
 plot_hl(vantage)

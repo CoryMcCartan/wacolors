@@ -1,3 +1,8 @@
+# wacolors 0.2.2
+
+* Improved diverging palettes
+* Modified `foothills` palette
+
 # wacolors 0.2.1
 
 * Improve documentation
