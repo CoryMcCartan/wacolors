@@ -11,7 +11,7 @@
 
 ![Mt. Rainier](cover.jpg)
 
-The `wacolor` package contains 23 color palettes taken from the
+The `wacolor` package contains 28 color palettes taken from the
 landscapes and cities of Washington state. Colors were extracted from a
 set of photographs, and then combined to form a set of continuous and
 discrete palettes. Continuous palettes were designed to be perceptually
@@ -52,11 +52,12 @@ library(ggplot2)
 # See all palettes
 names(wacolors)
 #>  [1] "rainier"         "washington_pass" "palouse"         "forest"         
-#>  [5] "larch"           "coast"           "uw"              "fort_worden"    
-#>  [9] "skagit"          "flag"            "sound_sunset"    "ferries"        
-#> [13] "forest_fire"     "sea"             "sea_star"        "volcano"        
-#> [17] "baker"           "diablo"          "mountains"       "gorge"          
-#> [21] "foothills"       "olympic"         "vantage"
+#>  [5] "larch"           "coast"           "san_juan"        "uw"             
+#>  [9] "fort_worden"     "skagit"          "flag"            "sound_sunset"   
+#> [13] "ferries"         "forest_fire"     "sea"             "sea_star"       
+#> [17] "volcano"         "baker"           "diablo"          "puget"          
+#> [21] "mountains"       "gorge"           "foothills"       "footbridge"     
+#> [25] "olympic"         "lopez"           "vantage"         "stuart"
 
 # See one palette
 wacolors$rainier
@@ -147,8 +148,8 @@ pal_functions("palouse")
 
 ### Continuous Palettes
 
-![](man/figures/README-cont-palettes-1.png)<!-- -->![](man/figures/README-cont-palettes-2.png)<!-- -->![](man/figures/README-cont-palettes-3.png)<!-- -->![](man/figures/README-cont-palettes-4.png)<!-- -->![](man/figures/README-cont-palettes-5.png)<!-- -->![](man/figures/README-cont-palettes-6.png)<!-- -->![](man/figures/README-cont-palettes-7.png)<!-- -->![](man/figures/README-cont-palettes-8.png)<!-- -->![](man/figures/README-cont-palettes-9.png)<!-- -->![](man/figures/README-cont-palettes-10.png)<!-- -->![](man/figures/README-cont-palettes-11.png)<!-- -->![](man/figures/README-cont-palettes-12.png)<!-- -->![](man/figures/README-cont-palettes-13.png)<!-- -->
+![](man/figures/README-cont-palettes-1.png)<!-- -->![](man/figures/README-cont-palettes-2.png)<!-- -->![](man/figures/README-cont-palettes-3.png)<!-- -->![](man/figures/README-cont-palettes-4.png)<!-- -->![](man/figures/README-cont-palettes-5.png)<!-- -->![](man/figures/README-cont-palettes-6.png)<!-- -->![](man/figures/README-cont-palettes-7.png)<!-- -->![](man/figures/README-cont-palettes-8.png)<!-- -->![](man/figures/README-cont-palettes-9.png)<!-- -->![](man/figures/README-cont-palettes-10.png)<!-- -->![](man/figures/README-cont-palettes-11.png)<!-- -->![](man/figures/README-cont-palettes-12.png)<!-- -->![](man/figures/README-cont-palettes-13.png)<!-- -->![](man/figures/README-cont-palettes-14.png)<!-- -->![](man/figures/README-cont-palettes-15.png)<!-- -->![](man/figures/README-cont-palettes-16.png)<!-- -->
 
 ### Discrete Palettes
 
-![](man/figures/README-disc-palettes-1.png)<!-- -->![](man/figures/README-disc-palettes-2.png)<!-- -->![](man/figures/README-disc-palettes-3.png)<!-- -->![](man/figures/README-disc-palettes-4.png)<!-- -->![](man/figures/README-disc-palettes-5.png)<!-- -->![](man/figures/README-disc-palettes-6.png)<!-- -->![](man/figures/README-disc-palettes-7.png)<!-- -->![](man/figures/README-disc-palettes-8.png)<!-- -->![](man/figures/README-disc-palettes-9.png)<!-- -->![](man/figures/README-disc-palettes-10.png)<!-- -->
+![](man/figures/README-disc-palettes-1.png)<!-- -->![](man/figures/README-disc-palettes-2.png)<!-- -->![](man/figures/README-disc-palettes-3.png)<!-- -->![](man/figures/README-disc-palettes-4.png)<!-- -->![](man/figures/README-disc-palettes-5.png)<!-- -->![](man/figures/README-disc-palettes-6.png)<!-- -->![](man/figures/README-disc-palettes-7.png)<!-- -->![](man/figures/README-disc-palettes-8.png)<!-- -->![](man/figures/README-disc-palettes-9.png)<!-- -->![](man/figures/README-disc-palettes-10.png)<!-- -->![](man/figures/README-disc-palettes-11.png)<!-- -->![](man/figures/README-disc-palettes-12.png)<!-- -->

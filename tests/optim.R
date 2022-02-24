@@ -34,8 +34,8 @@ tvc(ferries)
 
 
 # sea_star ####
-sea_star = sequential_hcl(15, h=c(-50, 48), l=c(15, 80),
-                          c=c(35, 90), cmax=98, power=c(2.2, 1))
+#sea_star = sequential_hcl(15, h=c(-50, 48), l=c(15, 80),
+#                          c=c(35, 90), cmax=98, power=c(2.2, 1))
 sea_star = divergingx_hcl(15, h1=-50, h2=25, h3=48, l1=15, l2 = 48, l3 = 81,
                           c1=35, cmax1=70, c2=35, cmax2=98, c3=90,
                           p1=0.8, p2=1, p3=0.6, p4=1)
@@ -64,6 +64,7 @@ plot_hl(sea)
 testpal(sea)
 tvc(sea)
 
+
 # volcano ####
 v_old = c(rock="#30353F", ash="#9F9B93", glacier="#D9E1EC")
 specplot(v_old)
@@ -90,8 +91,9 @@ tvc(mountains)
 # baker ####
 wm = c("#4D6E9F", "#9CB3DC", "#D0C5D1", "#F3ECE2", "#F1F1F1")
 specplot(wm)
-baker = sequential_hcl(15, h=c(-110, 80), l=c(56, 94),
-                       c=c(32, 6), cmax=0, power=c(0.6, 1))
+baker = sequential_hcl(15, h=c(-120, 80), l=c(52, 96),
+                       c=c(30, 12), cmax=40, power=c(0.6, 1))
+specplot(baker)
 specplot(baker, colorRampPalette(wm)(15))
 testpal(baker)
 plot_hl(baker)
@@ -107,6 +109,14 @@ plot_hl(diablo)
 plot_hl(sea)
 tvc(diablo)
 
+# puget ####
+puget = sequential_hcl(15, h=c(140, 375), l=c(18, 77),
+                       c=c(10, 44), cmax=52, power=c(1.9, 1))
+specplot(puget)
+plot_hl(puget)
+testpal(puget)
+tvc(puget)
+
 # gorge ####
 gorge = sequential_hcl(15, h=c(170, 70), l=c(18, 82),
                         c=c(20, 30), cmax=56, power=c(1.15, 1))
@@ -117,12 +127,20 @@ plot_hl(gorge)
 tvc(gorge)
 
 # foothills####
-foothills = sequential_hcl(15, h=c(205, 90), l=c(4, 76),
-                                  c=c(16, 12), cmax=68, power=c(0.6, 1.0))
+foothills = sequential_hcl(15, h=c(212, 90), l=c(5, 75),
+                                  c=c(16, 8), cmax=68, power=c(0.7, 1.0))
 specplot(foothills, gorge)
 plot_hl(foothills)
 testpal(foothills)
 tvc(foothills)
+
+# footbridge ####
+footbridge = sequential_hcl(15, h=c(30, 65), l=c(15, 75),
+                           c=c(10, 15), cmax=45, power=c(1.8, 1.0))
+specplot(footbridge)
+plot_hl(footbridge)
+testpal(footbridge)
+tvc(footbridge)
 
 # olympic ####
 olympic = divergingx_hcl(15, h1=120, h2=NA, h3=266, l1=18, l2=85, l3=18,
@@ -148,6 +166,25 @@ testpal(vantage)
 plot_hl(vantage)
 tvc(vantage)
 
+
+# lopez ####
+lopez = diverging_hcl(15, h1=52, h2=265, l1=52, l2=95,
+                      c=65, p1=0.4, p2=1)
+specplot(lopez)
+plot_hl(lopez)
+testpal(lopez)
+tvc(lopez)
+
+
+# stuart ####
+stuart = divergingx_hcl(15, h1=-80, h2=20, h3=140,
+                        l1=27, l2=93, l3=27,
+                        c1=45, cmax1=20, c2=25, cmax2=55, c3=15,
+                        p1=0.7, p2=1.0, p3=0.8)
+specplot(stuart)
+plot_hl(stuart)
+testpal(stuart)
+tvc(stuart)
 
 
 # HELPER FUNCTIONS --------------------------------------------------------

@@ -26,32 +26,65 @@ use more than seven discrete colors.  You can color a map with four.
 Anything more risks confusion.  Consider differentiating through faceting or
 labels, instead.
 
-Available palettes (use \code{\link[=wa_pal]{wa_pal()}} to visualize):
-\itemize{
-\item \code{rainier}
-\item \code{washington_pass}
-\item \code{palouse}
-\item \code{forest}
-\item \code{larch}
-\item \code{coast}
-\item \code{uw}
-\item \code{fort_worden}
-\item \code{skagit}
-\item \code{flag}
-\item \code{sound_sunset}
-\item \code{ferries}
-\item \code{forest_fire}
-\item \code{sea}
-\item \code{sea_star}
-\item \code{volcano}
-\item \code{baker}
-\item \code{diablo}
-\item \code{mountains}
-\item \code{gorge}
-\item \code{foothills}
-\item \code{olympic}
-\item \code{vantage}
-}
+\strong{Available continuous palettes}:
+
+\figure{README-cont-palettes-1.png}
+
+\figure{README-cont-palettes-2.png}
+
+\figure{README-cont-palettes-3.png}
+
+\figure{README-cont-palettes-4.png}
+
+\figure{README-cont-palettes-5.png}
+
+\figure{README-cont-palettes-6.png}
+
+\figure{README-cont-palettes-7.png}
+
+\figure{README-cont-palettes-8.png}
+
+\figure{README-cont-palettes-9.png}
+
+\figure{README-cont-palettes-10.png}
+
+\figure{README-cont-palettes-11.png}
+
+\figure{README-cont-palettes-12.png}
+
+\figure{README-cont-palettes-13.png}
+
+\figure{README-cont-palettes-14.png}
+
+\figure{README-cont-palettes-15.png}
+
+\figure{README-cont-palettes-16.png}
+
+\strong{Available discrete palettes}:
+
+\figure{README-disc-palettes-1.png}
+
+\figure{README-disc-palettes-2.png}
+
+\figure{README-disc-palettes-3.png}
+
+\figure{README-disc-palettes-4.png}
+
+\figure{README-disc-palettes-5.png}
+
+\figure{README-disc-palettes-6.png}
+
+\figure{README-disc-palettes-7.png}
+
+\figure{README-disc-palettes-8.png}
+
+\figure{README-disc-palettes-9.png}
+
+\figure{README-disc-palettes-10.png}
+
+\figure{README-disc-palettes-11.png}
+
+\figure{README-disc-palettes-12.png}
 }
 \examples{
 wacolors$rainier
