@@ -109,7 +109,7 @@ wacolors = list(
 
 cont_pal = c("sound_sunset", "ferries", "forest_fire", "sea_star", "sea",
              "volcano", "baker", "diablo", "puget", "mountains", "gorge",
-             "foothills", "olympic", "lopez", "vantage", "stuart")
+             "foothills", "footbridge", "olympic", "lopez", "vantage", "stuart")
 
 
 #' Washington State Color Palette Generator

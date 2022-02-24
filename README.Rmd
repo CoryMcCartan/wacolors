@@ -101,7 +101,7 @@ pal_functions("palouse")
 ```{r cont-palettes, echo=F, fig.height=1, out.width=NULL}
 cont_pal = c("sound_sunset", "ferries", "forest_fire", "sea_star", "sea",
              "volcano", "baker", "diablo", "puget", "mountains", "gorge",
-             "foothills", "olympic", "lopez", "vantage", "stuart")
+             "foothills", "footbridge", "olympic", "lopez", "vantage", "stuart")
 
 for (pal in cont_pal) {
     plot(wa_pal(pal, 256))

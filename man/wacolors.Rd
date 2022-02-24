@@ -60,6 +60,8 @@ labels, instead.
 
 \figure{README-cont-palettes-16.png}
 
+\figure{README-cont-palettes-17.png}
+
 \strong{Available discrete palettes}:
 
 \figure{README-disc-palettes-1.png}
@@ -83,8 +85,6 @@ labels, instead.
 \figure{README-disc-palettes-10.png}
 
 \figure{README-disc-palettes-11.png}
-
-\figure{README-disc-palettes-12.png}
 }
 \examples{
 wacolors$rainier
