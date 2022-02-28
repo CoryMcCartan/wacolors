@@ -121,7 +121,7 @@ scale_color_wa_b = function(palette="sound_sunset", which=NULL, ..., reverse=FAL
     pal = match_pal(palette)
     if (!is.null(which)) pal$pal = pal$pal[which]
     if (reverse) pal$pal = rev(pal$pal)
-    pal_fun = colorRampPalette(pal$pal)
+    pal_fun = scales::colour_ramp(pal$pal)
 
     binned_scale("color", pal$name, palette=pal_fun, ...)
 }
@@ -132,7 +132,7 @@ scale_fill_wa_b = function(palette="sound_sunset", which=NULL, ..., reverse=FALS
     pal = match_pal(palette)
     if (!is.null(which)) pal$pal = pal$pal[which]
     if (reverse) pal$pal = rev(pal$pal)
-    pal_fun = colorRampPalette(pal$pal)
+    pal_fun = scales::colour_ramp(pal$pal)
 
     binned_scale("fill", pal$name, palette=pal_fun, ...)
 }

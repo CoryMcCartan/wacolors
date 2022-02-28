@@ -20,7 +20,7 @@ Imports:
     scales
 Suggests: 
     cli,
-    rstudioapi
+    rstudioapi,
     colorspace,
     viridis,
     knitr,
