@@ -1,7 +1,11 @@
-# wacolors 0.2.2
+# wacolors 0.3.0
 
-* Improved diverging palettes
-* Modified `foothills` palette
+* New diverging palettes: `lopez` and `stuart`
+* New continuous palettes: `puget` and `footbridge`
+* New discrete palette: `san_juan`
+* Modified `foothills` and `baker` palettes
+* Improve palette printing 
+* Fix binned scales
 
 # wacolors 0.2.1
 
