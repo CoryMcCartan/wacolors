@@ -19,12 +19,13 @@ Imports:
     ggplot2,
     scales
 Suggests: 
-    knitr,
-    rmarkdown,
-    testthat (>= 3.0.0),
+    cli,
+    rstudioapi
     colorspace,
     viridis,
-    rstudioapi
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
 License: MIT + file LICENSE
 URL: https://github.com/CoryMcCartan/wacolors
 Encoding: UTF-8

@@ -20,24 +20,31 @@ match_pal = function(name) {
     list(pal=pal, name=name)
 }
 
-# `print.palette` modified from that in `wesanderson` (c) 2016 Karthik Ram
 #' @export
 #' @importFrom graphics rect par image text
 print.palette = function(x, ...) {
-    n <- length(x)
-    old <- par(mar=c(0.5, 0.5, 0.5, 0.5))
-    on.exit(par(old))
+    x_print = unclass(x)
+    if (!is.null(pal_name <- attr(x, "name", exact=TRUE))) {
+        cat("`", pal_name, "`\n", sep="")
+        attr(x_print, "name") = NULL
+    }
+    print(x_print)
 
-    image(1:n, 1, as.matrix(1:n), col=x,
-          ylab="", xaxt="n", yaxt="n", bty="n")
+    if (requireNamespace("cli", quietly=TRUE)) {
+        n_colors = cli::num_ansi_colors()
+        if (n_colors >= 256) {
+            if (n_colors < 256^3/2) cat("approximate palette:\n")
+            block = "\u00A0\u00A0"
+            cat(" ")
+            for (color in x) {
+                cat(cli::make_ansi_style(color, bg=TRUE)(block))
+                cat(" ")
+            }
+        }
+    }
 
-    rect(0, 0.9, n + 1, 1.1, col=grDevices::rgb(1, 1, 1, 0.8), border=NA)
-    text((n + 1) / 2, 1, labels=attr(x, "name"), col="black", cex=1, font=2)
+    cat("\n")
 
-    if (!is.null(names(x)))
-        text(1:n, 1.25, labels=names(x), col="black", cex=1)
-
-    print(unclass(x))
     invisible(x)
 }
 
@@ -53,7 +60,7 @@ plot.palette = function(x, ...) {
           ylab="", xaxt="n", yaxt="n", bty="n")
 
     rect(0, 0.9, n + 1, 1.1, col=grDevices::rgb(1, 1, 1, 0.8), border=NA)
-    text((n + 1) / 2, 1, labels=attr(x, "name"), col="black", cex=1, font=2)
+    text((n + 1) / 2, 1, labels=attr(x, "name", exact=TRUE), col="black", cex=1, font=2)
 
     if (!is.null(names(x)))
         text(1:n, 1.25, labels=names(x), col="black", cex=1)

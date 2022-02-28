@@ -27,8 +27,9 @@ to automatically interpolate between colors.}
 \item{reverse}{\code{TRUE} if palette should be reversed.}
 }
 \value{
-A vector of colors of type \code{palette}. If printed to the console, will
-plot the palette as well.
+A vector of colors of type \code{palette}. Use the \code{plot()} function to
+plot the palette. If the \code{cli} package is installed, printing the palette
+to the console will also show its colors.
 }
 \description{
 Generate \code{palette} objects from the \code{wacolors} list

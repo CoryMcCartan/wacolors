@@ -125,8 +125,9 @@ cont_pal = c("sound_sunset", "ferries", "forest_fire", "sea_star", "sea",
 #'   to automatically interpolate between colors.
 #' @param reverse `TRUE` if palette should be reversed.
 #'
-#' @return A vector of colors of type `palette`. If printed to the console, will
-#' plot the palette as well.
+#' @return A vector of colors of type `palette`. Use the `plot()` function to
+#'   plot the palette. If the `cli` package is installed, printing the palette
+#'   to the console will also show its colors.
 #'
 #' @examples
 #' wa_pal("rainier")
