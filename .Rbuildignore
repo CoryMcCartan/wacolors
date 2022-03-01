@@ -7,3 +7,4 @@
 ^cran-comments\.md$
 ^tests/optim\.R$
 ^CRAN-RELEASE$
+^CRAN-SUBMISSION$

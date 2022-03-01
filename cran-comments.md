@@ -1,3 +1,8 @@
+## Resubmission
+
+In this resubmission, I have updated CRAN URLs in my README to use the canonical
+form.
+
 ## Test environments
 * local OS X install, R 4.1.2
 * latest OS X (on gh-actions), (release)

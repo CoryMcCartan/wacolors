@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/CoryMcCartan/wacolors/workflows/R-CMD-check/badge.svg)](https://github.com/CoryMcCartan/wacolors/actions)
-[![CRAN](https://www.r-pkg.org/badges/version/wacolors)](https://cran.r-project.org/web/packages/wacolors/index.html)
+[![CRAN](https://www.r-pkg.org/badges/version/wacolors)](https://CRAN.R-project.org/package=wacolors)
 <!-- badges: end -->
 
 ![Mt. Rainier](cover.jpg)
