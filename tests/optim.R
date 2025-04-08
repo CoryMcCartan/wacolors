@@ -190,7 +190,7 @@ tvc(stuart)
 # HELPER FUNCTIONS --------------------------------------------------------
 
 plot_hl = function(pal) {
-    coords = as(hex2RGB(pal), "polarLUV")@coords
+    coords = as(colorspace::hex2RGB(pal), "polarLUV")@coords
     ggplot(NULL, aes(x=coords[,"H"], y=coords[,"L"], color=pal)) +
         geom_point(size=3) +
         scale_color_identity() +
